@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23868062746784962}
   - component: {fileID: 64868549691657868}
   m_Layer: 0
-  m_Name: Terrain_2
+  m_Name: Terrain_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 133b311931d3c4a10abb7b67d180b240, type: 2}
+  - {fileID: 2100000, guid: 824d3adafd1c2d64b8c82f09ed60bfe7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
