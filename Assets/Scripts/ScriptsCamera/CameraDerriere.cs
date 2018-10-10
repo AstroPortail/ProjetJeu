@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjetBonus : MonoBehaviour {
+public class CameraDerriere : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
