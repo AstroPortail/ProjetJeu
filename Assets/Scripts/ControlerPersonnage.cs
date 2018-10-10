@@ -24,8 +24,16 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject camDos; // pour la caméra de dos au personnage
     public GameObject cam1erePersonne; // pour la caméra qui regarde ce que le perso voit
 
+
+
+    private CharacterController controlleur; //controler le personnage
+    private Vector3 changerDirection = Vector3.zero; //
+    public float graviter = 20.0f; // permet au personnage d'avancer
+
     void Start()
     {
+        controlleur = GetComponent<CharacterController>();
+
         rbPerso = GetComponent<Rigidbody>();
         animPerso = GetComponent<Animator>();
        
@@ -43,18 +51,25 @@ public class ControlerPersonnage : MonoBehaviour
 
     {
 
+        if (controlleur.isGrounded)
+        {
+            changerDirection = transform.forward * Input.GetAxis("Vertical") * vitesseDeplacement; //changer de direction du personnage
+        }
+        controlleur.Move(changerDirection * Time.deltaTime); 
+        changerDirection.y -= graviter * Time.deltaTime; // permet detre a une hauteur et d'avancer
+
         //-------------CAMERA GESTION---------------------
 
         //gérer l'activation des caméras selon 1 ou 2
 
-       /* if (Input.GetKeyDown(KeyCode.Alpha1)) // Si le joueur appuie sur 1
-        {
-            ActiverCamera(camDos); //active caméra de dos
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) // Si le joueur appuie sur 2
-        {
-            ActiverCamera(cam1erePersonne); // active caméra première personne
-        } */
+        /* if (Input.GetKeyDown(KeyCode.Alpha1)) // Si le joueur appuie sur 1
+         {
+             ActiverCamera(camDos); //active caméra de dos
+         }
+         else if (Input.GetKeyDown(KeyCode.Alpha2)) // Si le joueur appuie sur 2
+         {
+             ActiverCamera(cam1erePersonne); // active caméra première personne
+         } */
 
         //-------------GESTION DU PERSONNAGE---------------------
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
