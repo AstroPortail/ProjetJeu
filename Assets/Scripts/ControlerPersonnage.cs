@@ -26,13 +26,13 @@ public class ControlerPersonnage : MonoBehaviour
 
 
 
-    private CharacterController controlleur; //controler le personnage
-    private Vector3 changerDirection = Vector3.zero; //
-    public float graviter = 20.0f; // permet au personnage d'avancer
+   // private CharacterController controlleur; //controler le personnage
+   // private Vector3 changerDirection = Vector3.zero; //
+   // public float graviter = 20.0f; // permet au personnage d'avancer
 
     void Start()
     {
-        controlleur = GetComponent<CharacterController>();
+      //  controlleur = GetComponent<CharacterController>();
 
         rbPerso = GetComponent<Rigidbody>();
         animPerso = GetComponent<Animator>();
@@ -51,12 +51,12 @@ public class ControlerPersonnage : MonoBehaviour
 
     {
 
-        if (controlleur.isGrounded)
-        {
-            changerDirection = transform.forward * Input.GetAxis("Vertical") * vitesseDeplacement; //changer de direction du personnage
-        }
-        controlleur.Move(changerDirection * Time.deltaTime); 
-        changerDirection.y -= graviter * Time.deltaTime; // permet detre a une hauteur et d'avancer
+     //   if (controlleur.isGrounded)
+     //   {
+     //       changerDirection = transform.forward * Input.GetAxis("Vertical") * vitesseDeplacement; //changer de direction du personnage
+      //  }
+      //  controlleur.Move(changerDirection * Time.deltaTime); //
+     //   changerDirection.y -= graviter * Time.deltaTime; // permet detre a une hauteur et d'avancer
 
         //-------------CAMERA GESTION---------------------
 
@@ -84,6 +84,7 @@ public class ControlerPersonnage : MonoBehaviour
         // si le perso est au sol, il peut sauter
         if (Input.GetKeyDown(KeyCode.Space) && auSol == true)
         {
+            print("oui");
             rbPerso.velocity += new Vector3(0, vitesseSaut, 0); // déclare la variable du saut pour l'attribuer dans l'Inspecteur
 
         }
