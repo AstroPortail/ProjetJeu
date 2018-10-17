@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Image.unity
+    guid: bf00dfa8658186d4fb9bb221e4042a22
+  - enabled: 1
+    path: Assets/Scenes/Automne.unity
+    guid: cc1cf3aa3df5cd2479a66a75a9bc8ddf
+  - enabled: 1
+    path: Assets/Scenes/EteLaurence.unity
+    guid: 1d83051585a6cfa4b88bb87e4db6a218
+  - enabled: 1
+    path: Assets/Scenes/HiverHelo.unity
+    guid: 3d2981db01aa24e4e9dca6db3d7e6ad6
   m_configObjects: {}
