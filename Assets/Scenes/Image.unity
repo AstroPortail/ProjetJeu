@@ -7977,7 +7977,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "R\xE9glages"
 --- !u!222 &1483384975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8086,6 +8086,7 @@ GameObject:
   - component: {fileID: 1691146390}
   - component: {fileID: 1691146389}
   - component: {fileID: 1691146393}
+  - component: {fileID: 1691146394}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8192,6 +8193,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1691146394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691146388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205b9c22031fd694a80c48836751eaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanneauInstru: {fileID: 0}
+  btnReglages: {fileID: 380345413}
+  btnJouer: {fileID: 707528712}
+  btnInstru: {fileID: 1798016738}
 --- !u!1 &1798016738
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class GestionSceneDebut: MonoBehaviour {
     public GameObject PanneauInstru;
-    public GameObject btnEnregistrer;
+    public GameObject btnReglages;
     public GameObject btnJouer;
     public GameObject btnInstru;
 
-    public InputField champNomJoueur;
+    //public InputField champNomJoueur;
 
     public void Rejouer()
     {
@@ -24,13 +24,12 @@ public class GestionSceneDebut: MonoBehaviour {
 
     public void Instructions()
     {
-        if(champNomJoueur.text!="")
-        {
+        
           PanneauInstru.SetActive(true);
-          btnEnregistrer.SetActive(false);
+            btnReglages.SetActive(false);
           btnInstru.SetActive(false);
           btnJouer.SetActive(true);
-        }
+
 
     }
 
