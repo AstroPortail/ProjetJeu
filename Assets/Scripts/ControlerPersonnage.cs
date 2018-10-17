@@ -44,7 +44,6 @@ public class ControlerPersonnage : MonoBehaviour
         // si le perso est au sol, il peut sauter
         if (Input.GetKeyDown(KeyCode.Space) && auSol == true)
         {
-            print("oui");
             rbPerso.velocity += new Vector3(0, vitesseSaut, 0); // déclare la variable du saut pour l'attribuer dans l'Inspecteur
 
         }

@@ -34,7 +34,7 @@ public class GestionCamera : MonoBehaviour {
         //Si appuie sur 3 alors active camera fixe
         if (Input.GetKeyDown("3"))
         {
-            ActiverCamera(camTop);
+            camTop.SetActive(!camTop.activeSelf);
         }
 
         //Si appuie sur 4 alors active une camera sur le coin inférieur gauche pour que le joueur puisse voir derriere lui
@@ -51,7 +51,8 @@ public class GestionCamera : MonoBehaviour {
         //Si appuie sur 5 alors le jeu se mets sur pause et une camera de dessus que le joueur peut se deplacer pour voir la map
         if (Input.GetKeyDown("5"))
         {
-            ActiverCamera(camSurvole);
+           
+
         }
 
     }
