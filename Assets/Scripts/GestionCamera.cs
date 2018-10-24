@@ -52,8 +52,8 @@ public class GestionCamera : MonoBehaviour {
             camDerriere.SetActive(false);
         }
 
-        //Si appuie sur 5 alors le jeu se mets sur pause et une camera de dessus que le joueur peut se deplacer pour voir la map
-        if (Input.GetKeyDown("5"))
+        //Si appuie sur P alors le jeu se mets sur pause et une camera de dessus que le joueur peut se deplacer pour voir la map
+        if (Input.GetKeyDown("p"))
         {
             ActiverCamera(camSurvole);
             pause = true;
