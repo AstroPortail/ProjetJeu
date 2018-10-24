@@ -14,21 +14,25 @@ public class GestionCamera : MonoBehaviour {
     public GameObject camTop; // camera au dessus du personnage
     public GameObject camDerriere; // camera au dessus du personnage
     public GameObject camSurvole; // camera au dessus du personnage
-
+    static public bool pause = false;
 
     //Joue en boucle (à chaque cycle)
     public void Update()
     {
+       // print(Input.mousePosition.x);
+        //print(Input.mousePosition.y);
         //Si appuie sur 1 alors active camera devant le personnage 1er personne
         if (Input.GetKeyDown("1"))
         {
             ActiverCamera(camPremierePersonne);
+            pause = false;
         }
 
         //Si appuie sur 2 alors active camera derriere le personnage 3e personne
         if (Input.GetKeyDown("2"))
         {
             ActiverCamera(camTroisPersonne);
+            pause = false;
         }
 
         //Si appuie sur 3 alors active camera fixe
@@ -51,9 +55,11 @@ public class GestionCamera : MonoBehaviour {
         //Si appuie sur 5 alors le jeu se mets sur pause et une camera de dessus que le joueur peut se deplacer pour voir la map
         if (Input.GetKeyDown("5"))
         {
-           
-
+            ActiverCamera(camSurvole);
+            pause = true;
         }
+
+        
 
     }
 
@@ -63,4 +69,5 @@ public class GestionCamera : MonoBehaviour {
         Camera.main.gameObject.SetActive(false);
         cameraChoisie.SetActive(true);
     }
+
 }

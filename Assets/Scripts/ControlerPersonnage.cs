@@ -31,6 +31,7 @@ public class ControlerPersonnage : MonoBehaviour
     //-------------GESTION DU PERSONNAGE---------------------
     void Update()
     {
+        if(GestionCamera.pause == false) { 
         
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
@@ -49,7 +50,12 @@ public class ControlerPersonnage : MonoBehaviour
         }
         // on apelle l'animation 
         AnimerPerso();
-     
+        }
+        else
+        {
+            animPerso.SetFloat("vitesseDep", 0);
+        }
+
     }// FIN DU UPDATE
 
     //-------------GESTION ANIMATION PERSONNAGE---------------------
