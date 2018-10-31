@@ -28,10 +28,15 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCadeau;
     public GameObject imageCitrouille;
     public GameObject imageChampi;
+    public GameObject lesItems;
+    public MeshRenderer[] tableauMeshObjets;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        positionRandomObjets();
+
+        StartCoroutine(positionRandomObjets());
 
         rbPerso = GetComponent<Rigidbody>();
         animPerso = GetComponent<Animator>();
@@ -146,5 +151,25 @@ public class ControlerPersonnage : MonoBehaviour
             imageCitrouille.GetComponent<Image>().color = new Color32(255, 255, 255, 50);
         }
     }
+
+    IEnumerator positionRandomObjets()
+    {
+        for (var iEnum = 0; iEnum < tableauMeshObjets.Length ; iEnum++)
+        {
+            print(iEnum);
+            tableauMeshObjets[iEnum].enabled = false;
+        }
+        GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        GameObject.Find("champisAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        yield return new WaitForSeconds(4);
+
+        for (var iEnum2 = 0; iEnum2 < tableauMeshObjets.Length ; iEnum2++)
+        {
+            print(iEnum2);
+            tableauMeshObjets[iEnum2].enabled = true;
+        }
+    }
+
 
 }// fin de la classe
