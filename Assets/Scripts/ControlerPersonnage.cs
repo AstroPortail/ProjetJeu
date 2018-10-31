@@ -19,7 +19,12 @@ public class ControlerPersonnage : MonoBehaviour
 
     public bool auSol; //pour qu'on regarde si le perso est au sol ou non
 
-  
+    /* -------- Variable pour les objets dynamique ------------------- */
+    public static float nombrePiece;
+    public static bool cadeauRamasse = false;
+    public static bool citrouilleRamasse = false;
+    public static bool champiRamasse = false;
+
     void Start()
     {
     
@@ -67,6 +72,35 @@ public class ControlerPersonnage : MonoBehaviour
         out infoCollision, 0.8f); // on regarde si le personnage touche le sol
         //Si le personnage n'est pas au Sol alors l'animation saut doit jouer sinon elle arrête
         animPerso.SetBool("animSaut", !auSol);
+    }
+
+    //-------------Gestion de la détection de collision---------------------
+    void OnCollisionEnter(Collision infoCollision)
+    {
+
+        if (infoCollision.gameObject.name == "cadeauAsset")
+        {
+            cadeauRamasse = true;
+            Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "tireBouchonAsset" || infoCollision.gameObject.name == "mecaniqueAsset")
+        {
+            nombrePiece += 1;
+            Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "champisAsset")
+        {
+            champiRamasse = true;
+            Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "citrouilleAsset")
+        {
+            citrouilleRamasse = true;
+            Destroy(infoCollision.gameObject);
+        }
     }
 
 }// fin de la classe
