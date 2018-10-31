@@ -93,9 +93,15 @@ public class ControlerPersonnage : MonoBehaviour
     void OnCollisionEnter(Collision infoCollision)
     {
 
-        if (infoCollision.gameObject.name == "tireBouchonAsset" || infoCollision.gameObject.name == "mecaniqueAsset")
+        if (infoCollision.gameObject.name == "tireBouchonAsset(Clone)" || infoCollision.gameObject.name == "mecaniqueAsset(Clone)")
         {
             nombrePiece += 1;
+            Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "bombonneAsset(Clone)")
+        {
+            print("COUCOU");
             Destroy(infoCollision.gameObject);
         }
 
