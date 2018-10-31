@@ -8,8 +8,8 @@ public class ControlerPersonnage : MonoBehaviour
 {
 
     // GESTION PERSONNAGE--------------------------------------------------------
-    public Rigidbody rbPerso; // va chercher le rigid du perso
-    public Animator animPerso; // va chercher l'anim du perso
+    Rigidbody rbPerso; // va chercher le rigid du perso
+    Animator animPerso; // va chercher l'anim du perso
 
     public float vitesseRotation; //la vitesse de rotation du perso
     public float vitesseDeplacement = 10f; // la vitesse de déplacement du perso
@@ -24,6 +24,10 @@ public class ControlerPersonnage : MonoBehaviour
     public static bool cadeauRamasse = false;
     public static bool citrouilleRamasse = false;
     public static bool champiRamasse = false;
+    public GameObject textNombrePiece;
+    public GameObject imageCadeau;
+    public GameObject imageCitrouille;
+    public GameObject imageChampi;
 
     void Start()
     {
