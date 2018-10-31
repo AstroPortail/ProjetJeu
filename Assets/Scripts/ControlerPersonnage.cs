@@ -24,7 +24,7 @@ public class ControlerPersonnage : MonoBehaviour
     public static bool cadeauRamasse = false;
     public static bool citrouilleRamasse = false;
     public static bool champiRamasse = false;
-    public GameObject textNombrePiece;
+    public Text textNombrePiece;
     public GameObject imageCadeau;
     public GameObject imageCitrouille;
     public GameObject imageChampi;
@@ -37,10 +37,12 @@ public class ControlerPersonnage : MonoBehaviour
        
     }
 
-    //-------------GESTION DU PERSONNAGE---------------------
+    
     void Update()
     {
-        if(GestionCamera.pause == false) { 
+
+           //-------------GESTION DU PERSONNAGE---------------------
+        if (GestionCamera.pause == false) { 
         
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
@@ -65,6 +67,9 @@ public class ControlerPersonnage : MonoBehaviour
             animPerso.SetFloat("vitesseDep", 0);
         }
 
+        /*on appel la gestion des objets intéractifs à toutes les updates*/
+        gestionObjetsInteractifs();
+
     }// FIN DU UPDATE
 
     //-------------GESTION ANIMATION PERSONNAGE---------------------
@@ -82,15 +87,15 @@ public class ControlerPersonnage : MonoBehaviour
     void OnCollisionEnter(Collision infoCollision)
     {
 
-        if (infoCollision.gameObject.name == "cadeauAsset")
-        {
-            cadeauRamasse = true;
-            Destroy(infoCollision.gameObject);
-        }
-
         if (infoCollision.gameObject.name == "tireBouchonAsset" || infoCollision.gameObject.name == "mecaniqueAsset")
         {
             nombrePiece += 1;
+            Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "cadeauAsset")
+        {
+            cadeauRamasse = true;
             Destroy(infoCollision.gameObject);
         }
 
@@ -104,6 +109,40 @@ public class ControlerPersonnage : MonoBehaviour
         {
             citrouilleRamasse = true;
             Destroy(infoCollision.gameObject);
+        }
+    }
+
+    void gestionObjetsInteractifs()
+    {
+        /*Changer le texte des pieces*/
+
+        textNombrePiece.text = nombrePiece.ToString() + " / 12";
+
+        /* changer le alpha des images si leur objets est rammassé*/
+        if(cadeauRamasse == true)
+        {
+            imageCadeau.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        } else
+        {
+            imageCadeau.GetComponent<Image>().color = new Color32(255, 255, 255, 50);
+        }
+
+        if (champiRamasse == true)
+        {
+            imageChampi.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
+        else
+        {
+            imageChampi.GetComponent<Image>().color = new Color32(255, 255, 255, 50);
+        }
+
+        if (citrouilleRamasse == true)
+        {
+            imageCitrouille.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
+        else
+        {
+            imageCitrouille.GetComponent<Image>().color = new Color32(255, 255, 255, 50);
         }
     }
 
