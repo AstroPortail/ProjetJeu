@@ -9,12 +9,20 @@ public class GestionSceneDebut: MonoBehaviour {
     public GameObject btnReglages;
     public GameObject btnJouer;
     public GameObject btnInstru;
+    public GameObject leCanva;
+    public GameObject lePerso;
+
+    public static bool ceciEstLaFinDuJeu = false;
 
     //public InputField champNomJoueur;
 
    void Start()
     {
         DontDestroyOnLoad(gameObject);
+        if(ceciEstLaFinDuJeu == true)
+        {
+            portailFin();
+        }
     }
 
     void Update()
@@ -36,7 +44,13 @@ public class GestionSceneDebut: MonoBehaviour {
         {
             SceneManager.LoadScene("HiverHelo");
         }
-        
+
+        if (Input.GetKeyDown("j"))
+        {
+            ceciEstLaFinDuJeu = true;
+            SceneManager.LoadScene("Image");
+        }
+
     }
 
 
@@ -60,7 +74,13 @@ public class GestionSceneDebut: MonoBehaviour {
 
     }
 
-    
+    public void portailFin()
+    {
+        leCanva.SetActive(false);
+        lePerso = GameObject.Find("PrefabAstro");
+        lePerso.transform.position = new Vector3(9.01967f, 24.0951f, 84.73033f);
+        lePerso.GetComponent<ControlerPersonnage>().vitesseDeplacement = 5f;
+    }
 
 
 }// FIN CLASSE GESTIONSCENES
