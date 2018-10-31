@@ -80,7 +80,10 @@ public class GestionSceneDebut: MonoBehaviour {
         lePerso = GameObject.Find("PrefabAstro");
         lePerso.transform.position = new Vector3(9.01967f, 24.0951f, 84.73033f);
         lePerso.GetComponent<ControlerPersonnage>().vitesseDeplacement = 5f;
+        lePerso.transform.rotation = Quaternion.identity;
     }
+
+    
 
 
 }// FIN CLASSE GESTIONSCENES
