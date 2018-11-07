@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ToucheEnnemi : MonoBehaviour {
 
-    public GameObject paneau; // paneau rouge 
-    public Animator animPaneau;
-    
 
     void Desactif () {
 
