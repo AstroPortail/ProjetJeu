@@ -114,6 +114,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &24746623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114101609339570316, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 433698314}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &100486053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1183017867520878, guid: 35235bc9eb685fe4c84ed00e35d42561,
@@ -413,6 +419,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &324016682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114683910991470396, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 433698314}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!23 &325359911 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23926065001474362, guid: 35235bc9eb685fe4c84ed00e35d42561,
@@ -556,6 +568,21 @@ Prefab:
         type: 2}
       propertyPath: m_Color.a
       value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101609339570316, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114683910991470396, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596021661573942, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dd728a3ba3ece24a9cbd056bfebe6a7, type: 2}
@@ -1541,6 +1568,16 @@ Prefab:
       propertyPath: tableauMeshObjets.Array.data[10]
       value: 
       objectReference: {fileID: 1895666685}
+    - target: {fileID: 114257753369022900, guid: 893552ed184724a46909a9bece0fee26,
+        type: 2}
+      propertyPath: imageBarreVie
+      value: 
+      objectReference: {fileID: 24746623}
+    - target: {fileID: 114257753369022900, guid: 893552ed184724a46909a9bece0fee26,
+        type: 2}
+      propertyPath: imageBarreOxy
+      value: 
+      objectReference: {fileID: 324016682}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893552ed184724a46909a9bece0fee26, type: 2}
   m_IsPrefabAsset: 0

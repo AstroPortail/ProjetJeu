@@ -24,7 +24,6 @@ public class ControlerPersonnage : MonoBehaviour
     public static bool cadeauRamasse = false;
     public static bool citrouilleRamasse = false;
     public static bool champiRamasse = false;
-    public static float Temps;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
     public Text textNombrePiece;
@@ -102,30 +101,34 @@ public class ControlerPersonnage : MonoBehaviour
         if (infoCollision.gameObject.name == "tireBouchonAsset(Clone)" || infoCollision.gameObject.name == "mecaniqueAsset(Clone)")
         {
             nombrePiece += 1;
+            Countdown.totalTime += 5f;
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "bombonneAsset(Clone)")
         {
-            print("COUCOU");
+            NiveauOxygene += 15;
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "cadeauAsset")
         {
             cadeauRamasse = true;
+            Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "champisAsset")
         {
             champiRamasse = true;
+            Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "citrouilleAsset")
         {
             citrouilleRamasse = true;
+            Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
         }
     }
@@ -199,7 +202,7 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (NiveauVie > 0)
         {
-            NiveauVie -= 0.01f;
+           // NiveauVie -= 0.01f;
             imageBarreVie.fillAmount = NiveauVie / 100f;
         }
     }
