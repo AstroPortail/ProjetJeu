@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33189678830153518}
   - component: {fileID: 23931956853259324}
   m_Layer: 0
-  m_Name: bombonne Particule
+  m_Name: bonbonne Particule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
