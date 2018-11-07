@@ -1548,7 +1548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e251f0b3246f0ce4cb20c5f2b8dcb5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CitrouilleTableauMeshObjets: []
+  CitrouilleTableauMeshObjets:
+  - {fileID: 221576434}
 --- !u!1 &298058878
 GameObject:
   m_ObjectHideFlags: 0
