@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cadeau : MonoBehaviour {
-    public MeshRenderer[] tableauMeshObjets;
+public class cadeauScript : MonoBehaviour {
+    public MeshRenderer[] cadeauTableauMeshObjets;
 
     // Use this for initialization
     void Start () {
-        StartCoroutine(positionRandomObjets());
+        StartCoroutine(cadeauPositionRandomObjets());
     }
 
-    IEnumerator positionRandomObjets()
+    IEnumerator cadeauPositionRandomObjets()
     {
-        for (var iEnum = 0; iEnum < tableauMeshObjets.Length; iEnum++)
+        for (var iEnum = 0; iEnum < cadeauTableauMeshObjets.Length; iEnum++)
         {
             print(iEnum);
-            tableauMeshObjets[iEnum].enabled = false;
+            cadeauTableauMeshObjets[iEnum].enabled = false;
         }
         //GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
         GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
        // GameObject.Find("champisAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
         yield return new WaitForSeconds(4);
 
-        for (var iEnum2 = 0; iEnum2 < tableauMeshObjets.Length; iEnum2++)
+        for (var iEnum2 = 0; iEnum2 < cadeauTableauMeshObjets.Length; iEnum2++)
         {
             print(iEnum2);
-            tableauMeshObjets[iEnum2].enabled = true;
+            cadeauTableauMeshObjets[iEnum2].enabled = true;
         }
     }
 }

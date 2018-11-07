@@ -1,0 +1,33 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class champiScript : MonoBehaviour
+{
+    public MeshRenderer[] ChampiTableauMeshObjets;
+
+    // Use this for initialization
+    void Start()
+    {
+        StartCoroutine(ChampiPositionRandomObjets());
+    }
+
+    IEnumerator ChampiPositionRandomObjets()
+    {
+        for (var iEnum = 0; iEnum < ChampiTableauMeshObjets.Length; iEnum++)
+        {
+            print(iEnum);
+            ChampiTableauMeshObjets[iEnum].enabled = false;
+        }
+        //GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        //GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        GameObject.Find("champisAsset").transform.position = new Vector3(Random.Range(2f, 93f), 20, Random.Range(2f, 93f));
+        yield return new WaitForSeconds(4);
+
+        for (var iEnum2 = 0; iEnum2 < ChampiTableauMeshObjets.Length; iEnum2++)
+        {
+            print(iEnum2);
+            ChampiTableauMeshObjets[iEnum2].enabled = true;
+        }
+    }
+}
