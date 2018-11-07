@@ -17,9 +17,7 @@ public class cadeauScript : MonoBehaviour {
             print(iEnum);
             cadeauTableauMeshObjets[iEnum].enabled = false;
         }
-        //GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
-        GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
-       // GameObject.Find("champisAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
+        GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(2f, 93f), 20, Random.Range(2f, 93f));
         yield return new WaitForSeconds(4);
 
         for (var iEnum2 = 0; iEnum2 < cadeauTableauMeshObjets.Length; iEnum2++)

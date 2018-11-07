@@ -19,8 +19,6 @@ public class champiScript : MonoBehaviour
             print(iEnum);
             ChampiTableauMeshObjets[iEnum].enabled = false;
         }
-        //GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
-        //GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(48f, -48f), 20, Random.Range(48f, -48f));
         GameObject.Find("champisAsset").transform.position = new Vector3(Random.Range(2f, 93f), 20, Random.Range(2f, 93f));
         yield return new WaitForSeconds(4);
 

@@ -45,24 +45,23 @@ public class ControlerPersonnage : MonoBehaviour
     
     void Update()
     {
-        //------------ APPEL DE LA GESTION DES BARRES DE VIE ET OXYGENE ------------------// 
-
-        GestionOxygene();
-        GestionVie();
-
-        //----------- ON APPEL LA GESTION DES OBJETS ----------------//
-        gestionObjetsInteractifs();
 
         //------------- GESTION DU PERSONNAGE ---------------------//
-        if (GestionCamera.pause == false) { 
-        
-        transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
+        if (GestionCamera.pause == false) {
 
-        vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
+            //----------- ON APPEL LA GESTION DES OBJETS ----------------//
+            gestionObjetsInteractifs();
+            //------------ APPEL DE LA GESTION DES BARRES DE VIE ET OXYGENE ------------------// 
+            GestionOxygene();
+            GestionVie();
 
-        rbPerso.velocity = (transform.forward * vDeplacement) + new Vector3(0, rbPerso.velocity.y, 0); // on fait avancer notre perso
+            transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
-        // si le perso est au sol, il peut sauter
+            vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
+
+            rbPerso.velocity = (transform.forward * vDeplacement) + new Vector3(0, rbPerso.velocity.y, 0); // on fait avancer notre perso
+
+            // si le perso est au sol, il peut sauter
         if (Input.GetKeyDown(KeyCode.Space) && auSol == true)
         {
             rbPerso.velocity += new Vector3(0, vitesseSaut, 0); // déclare la variable du saut pour l'attribuer dans l'Inspecteur
