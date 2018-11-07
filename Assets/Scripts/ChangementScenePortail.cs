@@ -21,42 +21,68 @@ public class ChangementScenePortail : MonoBehaviour {
     {
 
 
-        // Fonction temporaire pour visualiser les divers environnements en appuyant sur une touche
-       int sceneAleatoire = Random.Range(0,2);
+        // Scène aléatoire au début du jeu
+        /*int sceneAleatoire = Random.Range(0,2);
 
-        if (sceneAleatoire == 0 && sceneEnCours!="Automne")
-        {
-         
-            SceneManager.LoadScene("Automne");
-        }
+         if (sceneAleatoire == 0 && sceneEnCours!="Automne")
+         {
+
+             SceneManager.LoadScene("Automne");
+         }
 
 
-        if (sceneAleatoire == 1 && sceneEnCours != "EteLaurence")
-        {
-            SceneManager.LoadScene("EteLaurence");
-        }
+         if (sceneAleatoire == 1 && sceneEnCours != "EteLaurence")
+         {
+             SceneManager.LoadScene("EteLaurence");
+         }
 
-        if (sceneAleatoire == 2 && sceneEnCours != "HiverHelo")
-        {
-            SceneManager.LoadScene("HiverHelo");
+         if (sceneAleatoire == 2 && sceneEnCours != "HiverHelo")
+         {
+             SceneManager.LoadScene("HiverHelo");
 
-        }
+         }*/
+
+       
 
     }
 
 
-        public void Rejouer()
+        /*public void Rejouer()
     {
         SceneManager.LoadScene("HiverHelo");
-    }
+    }*/
 
     public void Jouer()
-    {   
-        SceneManager.LoadScene("HiverHelo");
+    {
+        // Scène aléatoire au début du jeu
+        int sceneAleatoire = Random.Range(0,3);
+
+         if (sceneAleatoire == 0 && sceneEnCours!="Automne")
+         {
+
+             SceneManager.LoadScene("Automne");
+         }
+
+
+         if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
+         {
+             //SceneManager.LoadScene("EteLaurence");
+            SceneManager.LoadScene("HiverHelo");
+        }
+
+         if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
+         {
+             //SceneManager.LoadScene("HiverHelo");
+            SceneManager.LoadScene("EteLaurence");
+
+        }
+
+         // Va falloir penser a si jamais le joueur arrive toujours aux mêmes saisons et en manque toujours
+         //une, comment on va s'arranger
     }
 
-   
-    
+
+
 
 
 }// FIN CLASSE GESTIONSCENES
