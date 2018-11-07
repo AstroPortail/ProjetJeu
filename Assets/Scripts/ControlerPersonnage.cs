@@ -24,7 +24,12 @@ public class ControlerPersonnage : MonoBehaviour
     public static bool cadeauRamasse = false;
     public static bool citrouilleRamasse = false;
     public static bool champiRamasse = false;
+    public static float Temps;
+    public static float NiveauOxygene = 100f;
+    public static float NiveauVie = 100f;
     public Text textNombrePiece;
+    public Image imageBarreVie;
+    public Image imageBarreOxy;
     public GameObject imageCadeau;
     public GameObject imageCitrouille;
     public GameObject imageChampi;
@@ -46,16 +51,20 @@ public class ControlerPersonnage : MonoBehaviour
     
     void Update()
     {
+        //------------ APPEL DE LA GESTION DES BARRES DE VIE ET OXYGENE ------------------// 
 
-           //-------------GESTION DU PERSONNAGE---------------------
+        GestionOxygene();
+        GestionVie();
+
+        //----------- ON APPEL LA GESTION DES OBJETS ----------------//
+        gestionObjetsInteractifs();
+
+        //------------- GESTION DU PERSONNAGE ---------------------//
         if (GestionCamera.pause == false) { 
         
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
         vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
-
-        //remplace : rbPerso.AddRelativeForce(0,0, vDeplacement)
-        // OU si le perso doit subir la gravité et pouvoir 
 
         rbPerso.velocity = (transform.forward * vDeplacement) + new Vector3(0, rbPerso.velocity.y, 0); // on fait avancer notre perso
 
@@ -72,9 +81,6 @@ public class ControlerPersonnage : MonoBehaviour
         {
             animPerso.SetFloat("vitesseDep", 0);
         }
-
-        /*on appel la gestion des objets intéractifs à toutes les updates*/
-        gestionObjetsInteractifs();
 
     }// FIN DU UPDATE
 
@@ -174,6 +180,27 @@ public class ControlerPersonnage : MonoBehaviour
         {
             print(iEnum2);
             tableauMeshObjets[iEnum2].enabled = true;
+        }
+    }
+
+    public void GestionOxygene()
+    {
+
+        if (NiveauOxygene > 0)
+        {
+            NiveauOxygene -= 0.01f;
+            imageBarreOxy.fillAmount = NiveauOxygene / 100f;
+
+        }
+    }
+
+    public void GestionVie()
+    {
+
+        if (NiveauVie > 0)
+        {
+            NiveauVie -= 0.01f;
+            imageBarreVie.fillAmount = NiveauVie / 100f;
         }
     }
 
