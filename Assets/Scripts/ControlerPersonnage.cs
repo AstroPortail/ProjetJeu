@@ -33,6 +33,7 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCitrouille;
     public GameObject imageChampi;
     public GameObject lesItems;
+    public GameObject[] lesEnnemis;
 
     void Start()
     {
