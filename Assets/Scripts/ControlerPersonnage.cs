@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class ControlerPersonnage : MonoBehaviour
@@ -125,6 +126,20 @@ public class ControlerPersonnage : MonoBehaviour
             citrouilleRamasse = true;
             Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider infoCollision)
+    {
+        if(infoCollision.gameObject.name == "colliderAraignee")
+        {
+            print("ENTRE");
+            /*lesEnnemis = GameObject.FindGameObjectsWithTag("ennemieAraignee");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+            }*/
         }
     }
 
