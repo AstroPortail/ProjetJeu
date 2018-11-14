@@ -35125,7 +35125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.65
+      value: -7.78
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35177,11 +35177,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
+      propertyPath: m_Name
+      value: portailHiver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4711d381878aac9478a1fed8b98d8419, type: 3}
@@ -35203,8 +35207,20 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145539471}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.0707347, y: 4.7586746, z: 0.3024634}
   m_Center: {x: 5.320438, y: 2.4938068, z: 4.065029}
+--- !u!114 &2145539473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2145539471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b5940a5b6d83a4b8f172820eeb2691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneEnCours: 
