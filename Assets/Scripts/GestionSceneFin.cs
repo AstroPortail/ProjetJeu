@@ -10,11 +10,12 @@ public class GestionSceneFin : MonoBehaviour {
 
     private void Start()
     {
-        champNomJoueur.text =PlayerPrefs.GetString("nomJoueur") + "Vous avez perdu";
+        champNomJoueur.text =PlayerPrefs.GetString("nomJoueur"); ;
     }
 
     public void Rejouer()
     {
         SceneManager.LoadScene("SceneJeu");
+        //Mettre le "pointage" à Zéro.
     }
 }

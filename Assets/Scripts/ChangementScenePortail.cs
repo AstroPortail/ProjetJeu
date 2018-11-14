@@ -9,7 +9,8 @@ public class ChangementScenePortail : MonoBehaviour {
     public string sceneEnCours; // permet de ne pas retourner dans une scène ou le perso est déjà.
     
 
-    //public InputField champNomJoueur;
+    public static InputField champNomJoueur;
+    
 
    void Start()
     {
@@ -21,65 +22,74 @@ public class ChangementScenePortail : MonoBehaviour {
     {
 
 
-        // Scène aléatoire au début du jeu
-        /*int sceneAleatoire = Random.Range(0,2);
-
-         if (sceneAleatoire == 0 && sceneEnCours!="Automne")
-         {
-
-             SceneManager.LoadScene("Automne");
-         }
-
-
-         if (sceneAleatoire == 1 && sceneEnCours != "EteLaurence")
-         {
-             SceneManager.LoadScene("EteLaurence");
-         }
-
-         if (sceneAleatoire == 2 && sceneEnCours != "HiverHelo")
-         {
-             SceneManager.LoadScene("HiverHelo");
-
-         }*/
-
-       
 
     }
 
 
-        /*public void Rejouer()
-    {
-        SceneManager.LoadScene("HiverHelo");
-    }*/
+    /*public void Rejouer()
+{
+    SceneManager.LoadScene("HiverHelo");
+}*/
 
     public void Jouer()
     {
+        if (champNomJoueur.text != "")
+        {
+            // Scène aléatoire au début du jeu
+            int sceneAleatoire = Random.Range(0, 3);
+
+            if (sceneAleatoire == 0 && sceneEnCours != "Automne")
+            {
+
+                SceneManager.LoadScene("Automne");
+            }
+
+            if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
+            {
+                //SceneManager.LoadScene("EteLaurence");
+                SceneManager.LoadScene("HiverHelo");
+            }
+
+            if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
+            {
+                //SceneManager.LoadScene("HiverHelo");
+                SceneManager.LoadScene("EteLaurence");
+
+            }
+
+        }
+
+    }
+
+
+    public void Rejouer()
+        {
         // Scène aléatoire au début du jeu
-        int sceneAleatoire = Random.Range(0,3);
+        int sceneAleatoire = Random.Range(0, 3);
 
-         if (sceneAleatoire == 0 && sceneEnCours!="Automne")
-         {
+        if (sceneAleatoire == 0 && sceneEnCours != "Automne")
+        {
 
-             SceneManager.LoadScene("Automne");
-         }
+            SceneManager.LoadScene("Automne");
+        }
 
-
-         if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
-         {
-             //SceneManager.LoadScene("EteLaurence");
+        if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
+        {
+            //SceneManager.LoadScene("EteLaurence");
             SceneManager.LoadScene("HiverHelo");
         }
 
-         if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
-         {
-             //SceneManager.LoadScene("HiverHelo");
+        if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
+        {
+            //SceneManager.LoadScene("HiverHelo");
             SceneManager.LoadScene("EteLaurence");
 
         }
-
-         // Va falloir penser a si jamais le joueur arrive toujours aux mêmes saisons et en manque toujours
-         //une, comment on va s'arranger
     }
+
+        // Va falloir penser a si jamais le joueur arrive toujours aux mêmes saisons et en manque toujours
+        //une, comment on va s'arranger
+    
 
 
 

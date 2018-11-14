@@ -28,28 +28,6 @@ public class GestionSceneDebut: MonoBehaviour {
     void Update()
     {
 
-        // Fonction temporaire pour visualiser les divers environnements en appuyant sur une touche
-        if (Input.GetKeyDown("f"))
-        {
-         
-            SceneManager.LoadScene("Automne");
-        }
-
-        if (Input.GetKeyDown("e"))
-        {
-            SceneManager.LoadScene("EteLaurence");
-        }
-
-        if (Input.GetKeyDown("h"))
-        {
-            SceneManager.LoadScene("HiverHelo");
-        }
-
-        if (Input.GetKeyDown("j"))
-        {
-            ceciEstLaFinDuJeu = true;
-            SceneManager.LoadScene("Image");
-        }
 
     }
 
