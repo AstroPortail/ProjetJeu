@@ -14,6 +14,7 @@ public class cadeauScript : MonoBehaviour {
     {
         for (var iEnum = 0; iEnum < cadeauTableauMeshObjets.Length; iEnum++)
         {
+            print(iEnum);
             cadeauTableauMeshObjets[iEnum].enabled = false;
         }
         GameObject.Find("cadeauAsset").transform.position = new Vector3(Random.Range(2f, 93f), 20, Random.Range(2f, 93f));
@@ -21,6 +22,7 @@ public class cadeauScript : MonoBehaviour {
 
         for (var iEnum2 = 0; iEnum2 < cadeauTableauMeshObjets.Length; iEnum2++)
         {
+            print(iEnum2);
             cadeauTableauMeshObjets[iEnum2].enabled = true;
         }
     }
