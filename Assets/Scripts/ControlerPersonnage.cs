@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class ControlerPersonnage : MonoBehaviour
@@ -33,6 +34,7 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCitrouille;
     public GameObject imageChampi;
     public GameObject lesItems;
+    public GameObject[] lesEnnemis;
 
     void Start()
     {
@@ -124,6 +126,84 @@ public class ControlerPersonnage : MonoBehaviour
             citrouilleRamasse = true;
             Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
+        }
+    }
+
+    private void OnTriggerStay(Collider infoTrigger)
+    {
+        if (infoTrigger.gameObject.name == "colliderArbre")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++ )
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = true;
+            }
+        }
+
+        if (infoTrigger.gameObject.name == "colliderAbeille")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++)
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = true;
+            }
+        }
+
+        if (infoTrigger.gameObject.name == "colliderAraignee")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++)
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = true;
+            }
+        }
+
+    }
+
+    private void OnTriggerExit(Collider infoTrigger)
+    {
+        if (infoTrigger.gameObject.name == "colliderArbre")
+        {
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++)
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = false;
+            }
+        }
+
+        if (infoTrigger.gameObject.name == "colliderAbeille")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++)
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = false;
+            }
+        }
+
+        if (infoTrigger.gameObject.name == "colliderAraignee")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+            var longueurTableau = lesEnnemis.Length;
+            for (var iCompteur = 0; iCompteur < longueurTableau; iCompteur++)
+            {
+                lesEnnemis[iCompteur].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[iCompteur].GetComponent<ennemisAi>().enabled = false;
+            }
         }
     }
 
