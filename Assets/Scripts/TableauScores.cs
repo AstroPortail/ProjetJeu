@@ -15,8 +15,8 @@ public class TableauScores : MonoBehaviour {
     
 
     void Start () {
-      ChangementScenePortail.champNomJoueur.text="Kim";
-      ControlerPersonnage.NiveauOxygene=10;
+      //ChangementScenePortail.champNomJoueur.text="Kim";
+      //ControlerPersonnage.NiveauOxygene=10;
 
 	}
 	

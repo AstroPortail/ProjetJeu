@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class ChangementScenePortail : MonoBehaviour {
 
     public string sceneEnCours; // permet de ne pas retourner dans une scène ou le perso est déjà.
-    
-
     public static InputField champNomJoueur;
     
 
