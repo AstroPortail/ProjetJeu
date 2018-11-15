@@ -59,8 +59,6 @@ public class GestionCamera : MonoBehaviour {
             pause = true;
         }
 
-        
-
     }
 
     // Désactive la caméra actuelle et en active la caméra choisie

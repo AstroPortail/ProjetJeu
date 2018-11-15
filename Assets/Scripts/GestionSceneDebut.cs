@@ -25,14 +25,7 @@ public class GestionSceneDebut: MonoBehaviour {
         }
     }
 
-    void Update()
-    {
-
-
-    }
-
-
-        public void Rejouer()
+   public void Rejouer()
     {
         SceneManager.LoadScene("HiverHelo");
     }

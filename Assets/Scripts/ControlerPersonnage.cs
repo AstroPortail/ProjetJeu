@@ -33,8 +33,8 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCadeau;
     public GameObject imageCitrouille;
     public GameObject imageChampi;
-    public GameObject lesItems;
-    public GameObject[] lesEnnemis;
+
+    //public GameObject[] lesEnnemis;
 
     void Start()
     {
@@ -129,19 +129,19 @@ public class ControlerPersonnage : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider infoCollision)
+    /* void OnTriggerEnter(Collider infoCollision)
     {
         if(infoCollision.gameObject.name == "colliderAraignee")
         {
             print("ENTRE");
-            /*lesEnnemis = GameObject.FindGameObjectsWithTag("ennemieAraignee");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemieAraignee");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
             {
                 lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
-            }*/
+            }
         }
-    }
+    }*/
 
     void gestionObjetsInteractifs()
     {
