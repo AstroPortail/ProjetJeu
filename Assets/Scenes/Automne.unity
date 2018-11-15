@@ -977,6 +977,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.46763602
       objectReference: {fileID: 0}
+    - target: {fileID: 1623720892805564, guid: 5dca37c5d9f3f4d4cbd068a8ea5348f9, type: 2}
+      propertyPath: m_Name
+      value: ennemiArbre
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623720892805564, guid: 5dca37c5d9f3f4d4cbd068a8ea5348f9, type: 2}
+      propertyPath: m_TagString
+      value: ennemiArbre
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dca37c5d9f3f4d4cbd068a8ea5348f9, type: 2}
   m_IsPrefabAsset: 0
@@ -1222,7 +1230,7 @@ GameObject:
   - component: {fileID: 68767757}
   - component: {fileID: 68767758}
   m_Layer: 0
-  m_Name: ColliderAbeille
+  m_Name: colliderAbeille
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2013,7 +2021,7 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 354644857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -2061,7 +2069,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 354644857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6be5e38cac2e674799239fad3dd1574, type: 3}
   m_Name: 
@@ -8912,6 +8920,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1195425031925580, guid: 4d66f45f4c784a74ea80ee66ca9f9424, type: 2}
+      propertyPath: m_Name
+      value: ennemiAraignee
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195425031925580, guid: 4d66f45f4c784a74ea80ee66ca9f9424, type: 2}
+      propertyPath: m_TagString
+      value: ennemiAraignee
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d66f45f4c784a74ea80ee66ca9f9424, type: 2}
   m_IsPrefabAsset: 0
@@ -13708,7 +13724,7 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648242528}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -13757,7 +13773,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648242528}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6be5e38cac2e674799239fad3dd1574, type: 3}
   m_Name: 
@@ -21730,6 +21746,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000001
       objectReference: {fileID: 0}
+    - target: {fileID: 1692177501903460, guid: 21cf90c2c1c464c40b4bbf0fb5b1fa60, type: 2}
+      propertyPath: m_Name
+      value: ennemiAbeille
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692177501903460, guid: 21cf90c2c1c464c40b4bbf0fb5b1fa60, type: 2}
+      propertyPath: m_TagString
+      value: ennemiAbeille
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21cf90c2c1c464c40b4bbf0fb5b1fa60, type: 2}
   m_IsPrefabAsset: 0
@@ -23014,7 +23038,7 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1903550340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -23035,7 +23059,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1903550340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6be5e38cac2e674799239fad3dd1574, type: 3}
   m_Name: 
@@ -23187,7 +23211,7 @@ GameObject:
   - component: {fileID: 2069570552}
   - component: {fileID: 2069570553}
   m_Layer: 0
-  m_Name: ColliderArbres
+  m_Name: colliderArbre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
