@@ -34,7 +34,7 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCitrouille;
     public GameObject imageChampi;
 
-    //public GameObject[] lesEnnemis;
+    public GameObject[] lesEnnemis;
 
     void Start()
     {
@@ -129,19 +129,83 @@ public class ControlerPersonnage : MonoBehaviour
         }
     }
 
-    /* void OnTriggerEnter(Collider infoCollision)
+     void OnTriggerEnter(Collider infoCollision)
     {
         if(infoCollision.gameObject.name == "colliderAraignee")
         {
             print("ENTRE");
-            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemieAraignee");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
             {
                 lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[i].GetComponent<AI>().enabled = true;
             }
         }
-    }*/
+
+        if (infoCollision.gameObject.name == "colliderAbeille")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[i].GetComponent<AI>().enabled = true;
+            }
+        }
+
+        if (infoCollision.gameObject.name == "colliderArbre")
+        {
+            print("ENTRE");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                lesEnnemis[i].GetComponent<AI>().enabled = true;
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider infoCollision)
+    {
+        if (infoCollision.gameObject.name == "colliderAraignee")
+        {
+            print("SORT");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[i].GetComponent<AI>().enabled = false;
+            }
+        }
+
+        if (infoCollision.gameObject.name == "colliderAbeille")
+        {
+            print("SORT");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[i].GetComponent<AI>().enabled = false;
+            }
+        }
+
+        if (infoCollision.gameObject.name == "colliderArbre")
+        {
+            print("SORT");
+            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var ennLenght = lesEnnemis.Length;
+            for (var i = 0; i < ennLenght; i++)
+            {
+                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemis[i].GetComponent<AI>().enabled = false;
+            }
+        }
+    }
 
     void gestionObjetsInteractifs()
     {
