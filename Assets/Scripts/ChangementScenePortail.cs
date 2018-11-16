@@ -31,7 +31,7 @@ public class ChangementScenePortail : MonoBehaviour {
 
     public void Jouer()
     {
-        if (champNomJoueur.text != "")
+        if (champNomJoueur.text !="")
         {
             // Scène aléatoire au début du jeu
             int sceneAleatoire = Random.Range(0, 3);

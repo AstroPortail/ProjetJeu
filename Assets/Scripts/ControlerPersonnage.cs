@@ -36,12 +36,18 @@ public class ControlerPersonnage : MonoBehaviour
 
     public GameObject[] lesEnnemis;
 
+    //Pour avoir du son
+    AudioSource audioSource;
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         rbPerso = GetComponent<Rigidbody>();
         animPerso = GetComponent<Animator>();
-       
+
+        //chercher le son
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     
@@ -98,6 +104,7 @@ public class ControlerPersonnage : MonoBehaviour
         {
             nombrePiece += 1;
             Countdown.totalTime += 5f;
+            audioSource.Play();
             Destroy(infoCollision.gameObject);
         }
 
