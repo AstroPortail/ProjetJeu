@@ -27,6 +27,7 @@ public class ControlerPersonnage : MonoBehaviour
     public static bool champiRamasse = false;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
+    public static bool estMort = false;
     public Text textNombrePiece;
     public Image imageBarreVie;
     public Image imageBarreOxy;
@@ -56,6 +57,8 @@ public class ControlerPersonnage : MonoBehaviour
 
         //------------- GESTION DU PERSONNAGE ---------------------//
         if (GestionCamera.pause == false) {
+            // ----------- ON VÉRIFIE SI LE PERSO EST MORT ------------ //
+            verifierSiEnVie();
 
             //----------- ON APPEL LA GESTION DES OBJETS ----------------//
             gestionObjetsInteractifs();
@@ -133,6 +136,11 @@ public class ControlerPersonnage : MonoBehaviour
             citrouilleRamasse = true;
             Countdown.totalTime += 15f;
             Destroy(infoCollision.gameObject);
+        }
+
+        if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
+        {
+            estMort = true;
         }
     }
 
@@ -256,6 +264,9 @@ public class ControlerPersonnage : MonoBehaviour
             NiveauOxygene -= 0.01f;
             imageBarreOxy.fillAmount = NiveauOxygene / 100f;
 
+        } else
+        {
+            estMort = true;
         }
     }
 
@@ -266,6 +277,17 @@ public class ControlerPersonnage : MonoBehaviour
         {
            // NiveauVie -= 0.01f;
             imageBarreVie.fillAmount = NiveauVie / 100f;
+        } else
+        {
+            estMort = true;
+        }
+    }
+
+    public void verifierSiEnVie()
+    {
+        if(estMort == true)
+        {
+            SceneManager.LoadScene("SceneFin");
         }
     }
 
