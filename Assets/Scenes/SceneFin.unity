@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13140187, g: 0.3462729, b: 0.60021555, a: 1}
+  m_IndirectSpecularColor: {r: 0.13139784, g: 0.34627998, b: 0.60021424, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneEnCours: 
+  champNomJoueur: {fileID: 0}
 --- !u!4 &990429672
 Transform:
   m_ObjectHideFlags: 0
@@ -982,7 +983,11 @@ MonoBehaviour:
   - 
   - 
   - 
-  tableauValeursScore: 00000000000000000000000000000000
+  tableauValeursScore:
+  - 0
+  - 0
+  - 0
+  - 0
   listeNoms: {fileID: 1273885648}
   listeScores: {fileID: 2107032019}
 --- !u!1 &1242716995

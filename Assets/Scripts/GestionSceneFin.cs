@@ -6,16 +6,34 @@ using UnityEngine.UI;
 
 public class GestionSceneFin : MonoBehaviour {
 
-    public InputField champNomJoueur;
-
-    private void Start()
-    {
-        champNomJoueur.text =PlayerPrefs.GetString("nomJoueur"); ;
-    }
-
+   
     public void Rejouer()
     {
-        SceneManager.LoadScene("SceneJeu");
-        //Mettre le "pointage" à Zéro.
+        
+                // oxygene, vie, temps a zéro
+
+                // Scène aléatoire au début du jeu
+                int sceneAleatoire = Random.Range(0, 3);
+
+                if (sceneAleatoire == 0)
+                {
+
+                    SceneManager.LoadScene("Automne");
+                }
+
+                if (sceneAleatoire == 1 )
+                {
+                    //SceneManager.LoadScene("EteLaurence");
+                    SceneManager.LoadScene("HiverHelo");
+                }
+
+                if (sceneAleatoire == 2)
+                {
+                    //SceneManager.LoadScene("HiverHelo");
+                    SceneManager.LoadScene("EteLaurence");
+
+                }
+
+            
     }
 }

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class ChangementScenePortail : MonoBehaviour {
 
     public string sceneEnCours; // permet de ne pas retourner dans une scène ou le perso est déjà.
-    public static InputField champNomJoueur;
-    
+    public  InputField champNomJoueur;
+    public static string leNomDuJoueur;
 
    void Start()
     {
@@ -33,6 +33,7 @@ public class ChangementScenePortail : MonoBehaviour {
     {
         if (champNomJoueur.text !="")
         {
+            leNomDuJoueur = champNomJoueur.text;
             // Scène aléatoire au début du jeu
             int sceneAleatoire = Random.Range(0, 3);
 
