@@ -145,8 +145,11 @@ public class ControlerPersonnage : MonoBehaviour
         if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
         {
             panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
-
-            estMort = true;
+            Camera.main.gameObject.GetComponent<Animator>().enabled = true;
+            //Wait for seconds pour desactiver le animator
+            // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
+        
+           // estMort = true;
         }
     }
 
