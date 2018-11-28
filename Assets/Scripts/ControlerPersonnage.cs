@@ -37,6 +37,10 @@ public class ControlerPersonnage : MonoBehaviour
 
     public GameObject[] lesEnnemis;
 
+    public GameObject panneauOxygene;
+    public GameObject panneauVie;
+    public GameObject panneauTouche;
+
     //Pour avoir du son
     AudioSource audioSource;
 
@@ -140,6 +144,8 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
         {
+            panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
+
             estMort = true;
         }
     }
@@ -149,6 +155,8 @@ public class ControlerPersonnage : MonoBehaviour
         if(infoCollision.gameObject.name == "colliderAraignee")
         {
             print("ENTRE");
+            lesEnnemis =
+
             lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
@@ -264,6 +272,11 @@ public class ControlerPersonnage : MonoBehaviour
             NiveauOxygene -= 0.01f;
             imageBarreOxy.fillAmount = NiveauOxygene / 100f;
 
+            if (NiveauOxygene < 15f) // si la panneau de l'oxygene est plus petit ou égal à 10 l'écran va flasher bleu
+            {
+               panneauOxygene.SetActive(true);
+            }
+
         } else
         {
             estMort = true;
@@ -277,6 +290,13 @@ public class ControlerPersonnage : MonoBehaviour
         {
            // NiveauVie -= 0.01f;
             imageBarreVie.fillAmount = NiveauVie / 100f;
+
+
+            if (NiveauVie < 15f) // si la panneau de l'oxygene est plus petit ou égal à 10 l'écran va flasher bleu
+            {
+                panneauVie.SetActive(true);
+            }
+
         } else
         {
             estMort = true;
