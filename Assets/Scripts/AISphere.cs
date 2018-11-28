@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class AISphere : MonoBehaviour {
+    public Vector3 cibleRandom;
+
+
+    private void Start()
+    {
+        cibleRandom = new Vector3(Random.Range(2f, 93f), 8, Random.Range(2f, 93f));
+    }
+    // Update is called once per frame
+    void Update () {
+
+        GetComponent<NavMeshAgent>().SetDestination(cibleRandom);
+        print(cibleRandom);
+
+        if(GetComponent<NavMeshAgent>().velocity.magnitude == 0)
+        {
+            cibleRandom = new Vector3(Random.Range(2f, 93f), 8, Random.Range(2f, 93f));
+        }
+    }
+}
