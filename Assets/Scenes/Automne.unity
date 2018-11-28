@@ -7154,6 +7154,9 @@ MonoBehaviour:
   imageCitrouille: {fileID: 1528279118}
   imageChampi: {fileID: 1085027535}
   lesEnnemis: []
+  panneauOxygene: {fileID: 782865060}
+  panneauVie: {fileID: 910753400}
+  panneauTouche: {fileID: 477824342}
 --- !u!54 &389944723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7513,6 +7516,11 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 26fb55e8ae34728499f6f45cd0527c73, type: 3}
+--- !u!1 &477824342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389513317949196, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 607141097}
 --- !u!1 &488616230
 GameObject:
   m_ObjectHideFlags: 0
@@ -14856,6 +14864,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &782865060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1755970777859624, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 607141097}
 --- !u!1 &804659093
 GameObject:
   m_ObjectHideFlags: 0
@@ -14986,6 +14999,11 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 26fb55e8ae34728499f6f45cd0527c73, type: 3}
+--- !u!1 &910753400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1005728379472152, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 607141097}
 --- !u!1 &937826390
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,8 +15,6 @@ public class AISphere : MonoBehaviour {
     void Update () {
 
         GetComponent<NavMeshAgent>().SetDestination(cibleRandom);
-        
-        print(cibleRandom);
 
         if(GetComponent<NavMeshAgent>().velocity.magnitude <= 0.1f)
         {

@@ -10324,6 +10324,9 @@ MonoBehaviour:
   imageCitrouille: {fileID: 1162089842}
   imageChampi: {fileID: 1799413006}
   lesEnnemis: []
+  panneauOxygene: {fileID: 1410242911}
+  panneauVie: {fileID: 1410242912}
+  panneauTouche: {fileID: 1410242913}
 --- !u!54 &595803054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17004,6 +17007,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 302ca28e4a0dbf040ac2b35d3ab11e57, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1410242911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1755970777859624, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 1410242910}
+--- !u!1 &1410242912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1005728379472152, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 1410242910}
+--- !u!1 &1410242913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389513317949196, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
+    type: 2}
+  m_PrefabInternal: {fileID: 1410242910}
 --- !u!1001 &1492194385
 Prefab:
   m_ObjectHideFlags: 0
