@@ -19,9 +19,10 @@ public class CameraTroisPers : MonoBehaviour {
     void Update()
     {
         transform.position = cible.transform.position + new Vector3(0, hauteurPivot, 0);
-        // transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+         transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
         //Annuler la rotation en Z
         // transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        transform.eulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //Caméra regarde le pivot
         camera.transform.LookAt(transform);
         // rayCastcameraPivot.transform.LookAt(transform);
