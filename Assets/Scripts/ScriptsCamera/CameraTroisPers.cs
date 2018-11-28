@@ -25,6 +25,7 @@ public class CameraTroisPers : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //Caméra regarde le pivot
         camera.transform.LookAt(transform);
+       // camera.transform.LookAt(cible.transform.position);
         // rayCastcameraPivot.transform.LookAt(transform);
     }
 }
