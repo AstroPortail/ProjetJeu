@@ -14,5 +14,9 @@ public class AI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GetComponent<NavMeshAgent>().SetDestination(cible.transform.position);
+        if (GetComponent<NavMeshAgent>().velocity.magnitude >= 0.1f)
+        {
+            GetComponent<Animator>().SetFloat("vitesse",1);
+        }
     }
 }

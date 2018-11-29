@@ -11,10 +11,10 @@ public class GestionSceneFin : MonoBehaviour {
     {
 
         // oxygene, vie, temps a zéro
-      /*  ControlerPersonnage.NiveauOxygene = 100f;
+         ControlerPersonnage.NiveauOxygene = 100f;
         ControlerPersonnage.NiveauVie = 100f;
         ControlerPersonnage.estMort = false;
-        Countdown.totalTime = 120f;*/
+        Countdown.totalTime = 120f;
 
                 // Scène aléatoire au début du jeu
                 int sceneAleatoire = Random.Range(0, 3);

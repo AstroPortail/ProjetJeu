@@ -52,13 +52,13 @@ public class ControlerPersonnage : MonoBehaviour
 
         //chercher le son
         audioSource = GetComponent<AudioSource>();
-
     }
 
     
     void Update()
     {
-
+        print("niveauVie=" + NiveauVie);
+        print("niveauVie=" + NiveauOxygene);
         //------------- GESTION DU PERSONNAGE ---------------------//
         if (GestionCamera.pause == false) {
             // ----------- ON VÉRIFIE SI LE PERSO EST MORT ------------ //
