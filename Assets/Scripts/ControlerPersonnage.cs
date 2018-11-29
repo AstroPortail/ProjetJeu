@@ -176,6 +176,8 @@ public class ControlerPersonnage : MonoBehaviour
             if (infoCollision.gameObject.name == "ennemiArbre")
             {
                 NiveauVie -= 35;
+
+                print("toucheArbre");
             }
 
             print("niveauVie = " + NiveauVie);
