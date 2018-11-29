@@ -9,8 +9,11 @@ public class GestionSceneFin : MonoBehaviour {
    
     public void Rejouer()
     {
-        
-                // oxygene, vie, temps a zéro
+
+        // oxygene, vie, temps a zéro
+        ControlerPersonnage.NiveauOxygene = 100f;
+        ControlerPersonnage.NiveauVie = 100f;
+        Countdown.totalTime = 120f;
 
                 // Scène aléatoire au début du jeu
                 int sceneAleatoire = Random.Range(0, 3);

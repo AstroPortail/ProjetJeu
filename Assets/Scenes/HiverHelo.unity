@@ -10388,6 +10388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1375435318}
+  niveauSphereTexte: {fileID: 0}
+  minutes: 0
+  seconds: 0
 --- !u!114 &595803058
 MonoBehaviour:
   m_ObjectHideFlags: 0

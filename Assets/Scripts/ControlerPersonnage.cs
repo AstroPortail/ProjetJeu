@@ -111,27 +111,34 @@ public class ControlerPersonnage : MonoBehaviour
         {
             nombrePiece += 1;
             Countdown.totalTime += 5f;
-            audioSource.Play();
+            GameObject son = GameObject.Find("sonPiece");
+            son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "bombonneAsset(Clone)")
         {
             NiveauOxygene += 15;
+            GameObject son = GameObject.Find("sonOxygene");
+            son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "cadeauAsset")
         {
             cadeauRamasse = true;
-           Countdown.totalTime += 15f;
+            Countdown.totalTime += 15f;
+            GameObject son = GameObject.Find("sonCadeau");
+            son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
         }
 
         if (infoCollision.gameObject.name == "champisAsset")
         {
             champiRamasse = true;
-           Countdown.totalTime += 15f;
+            Countdown.totalTime += 15f;
+            GameObject son = GameObject.Find("sonChampi");
+            son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
         }
 
@@ -139,6 +146,8 @@ public class ControlerPersonnage : MonoBehaviour
         {
             citrouilleRamasse = true;
             Countdown.totalTime += 15f;
+            GameObject son = GameObject.Find("sonCitrouille");
+            son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
         }
 
@@ -148,8 +157,28 @@ public class ControlerPersonnage : MonoBehaviour
             Camera.main.gameObject.GetComponent<Animator>().enabled = true;
             //Wait for seconds pour desactiver le animator
             // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
-        
-           // estMort = true;
+
+            // estMort = true;
+
+            // vérifier quel type d'ennemis et baisser la vie en conséquence 
+            if (infoCollision.gameObject.name == "ennemiAbeille")
+            {
+                NiveauVie -= 5;
+            }
+
+            // vérifier quel type d'ennemis et baisser la vie en conséquence 
+            if (infoCollision.gameObject.name == "ennemiAraignee")
+            {
+                NiveauVie -= 20;
+            }
+
+            // vérifier quel type d'ennemis et baisser la vie en conséquence 
+            if (infoCollision.gameObject.name == "ennemiArbre")
+            {
+                NiveauVie -= 35;
+            }
+
+            print("niveauVie = " + NiveauVie);
         }
     }
 
@@ -311,6 +340,8 @@ public class ControlerPersonnage : MonoBehaviour
         if(estMort == true)
         {
             SceneManager.LoadScene("SceneFin");
+            estMort = false;
+
         }
     }
 
