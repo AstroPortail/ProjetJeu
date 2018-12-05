@@ -197,6 +197,7 @@ public class ControlerPersonnage : MonoBehaviour
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
             if (infoCollision.gameObject.name == "ennemiAraignee")
             {
+                print("TOUCHE araignee");
                 NiveauVie -= 20;
             }
 
