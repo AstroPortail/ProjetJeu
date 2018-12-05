@@ -26,6 +26,7 @@ public class MuteMusic : MonoBehaviour {
         {
             audioSource.Pause();
             sonMute = true;
+            print(sonMute);
         }
     }
 }
