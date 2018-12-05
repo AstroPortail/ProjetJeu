@@ -24,8 +24,16 @@ public class MuteMusic : MonoBehaviour {
             audioSource.Play();
         } else
         {
-            audioSource.Pause();
+            audioSource.mute = !audioSource.mute;
             sonMute = true;
+            
         }
+    }
+
+
+    public void MuteTousLesSons()
+
+    {
+       AudioListener.pause = !AudioListener.pause;
     }
 }

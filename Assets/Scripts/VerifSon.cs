@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VerifSon : MonoBehaviour {
-    public AudioSource audioSource;
+    public AudioSource laMusiqua;
 
     // Use this for initialization
     void Start () {
         print("leSon est a mute = " + MuteMusic.sonMute);
-		if (MuteMusic.sonMute ==true) {
 
-            audioSource.Pause();
+        if (MuteMusic.sonMute == true) {
+            print(laMusiqua.mute);
+            laMusiqua.mute=true;
         }
 	}
 	
