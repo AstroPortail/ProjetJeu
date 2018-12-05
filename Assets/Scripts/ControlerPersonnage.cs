@@ -70,7 +70,7 @@ public class ControlerPersonnage : MonoBehaviour
             GestionOxygene();
             GestionVie();
 
-            transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
+          //  transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
             vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
 

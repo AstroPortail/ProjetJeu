@@ -14,10 +14,10 @@ public class Projectiles : MonoBehaviour {
     //public GameObject particuleContact;
     public GameObject particuleTir;
     public GameObject gun;
-
+    Animator animPersoTir; // va chercher l'animation du perso
     // Use this for initialization
-    void Start () {
-		
+    void Start() {
+        animPersoTir = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,7 @@ public class Projectiles : MonoBehaviour {
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
             transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+
         }
 
         //si le bouton gauche est appuyé et qu'on peut tirer, alors on tire continuellement
@@ -40,6 +41,7 @@ public class Projectiles : MonoBehaviour {
         {
             Invoke("TirerBalle", 0.1f);
             peutTirer = false;
+            animPersoTir.SetTrigger("animTir");
             print("Click gauche souris");
 
            // if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
@@ -60,7 +62,7 @@ public class Projectiles : MonoBehaviour {
     void TirerBalle()
     {
         particuleTir.SetActive(true);
-        Invoke("DesactiveBalle", 0.9f);
+        Invoke("DesactiveBalle", 0.5f);
     }
 
     //function qui  désactive la balle
