@@ -57,8 +57,8 @@ public class ControlerPersonnage : MonoBehaviour
     
     void Update()
     {
-        print("niveauVie=" + NiveauVie);
-        print("niveauVie=" + NiveauOxygene);
+        //print("niveauVie=" + NiveauVie);
+        //print("niveauVie=" + NiveauOxygene);
         //------------- GESTION DU PERSONNAGE ---------------------//
         if (GestionCamera.pause == false) {
             // ----------- ON VÉRIFIE SI LE PERSO EST MORT ------------ //
@@ -70,7 +70,7 @@ public class ControlerPersonnage : MonoBehaviour
             GestionOxygene();
             GestionVie();
 
-            transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
+          //  transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
             vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
 
@@ -84,10 +84,38 @@ public class ControlerPersonnage : MonoBehaviour
         }
         // on apelle l'animation 
         AnimerPerso();
+
+       
         }
         else
         {
-            animPerso.SetFloat("vitesseDep", 0);
+            animPerso.SetFloat("vitesseDep", 0); // le personnage en pause
+
+            //les ennemis en pause
+           /* var lesEnnemisAbres = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var ennLenghtArbre = lesEnnemisAbres.Length;
+            for (var i = 0; i < ennLenghtArbre; i++)
+            {
+                lesEnnemisAbres[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAbres[i].GetComponent<AI>().enabled = false;
+            }
+
+            var lesEnnemisAbeille = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var ennLenghtAbeille = lesEnnemisAbeille.Length;
+            for (var i = 0; i < ennLenghtAbeille; i++)
+            {
+                lesEnnemisAbeille[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAbeille[i].GetComponent<AI>().enabled = false;
+            }
+
+            var lesEnnemisAraignee = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+            var ennLenghtAraignee = lesEnnemisAraignee.Length;
+            for (var i = 0; i < ennLenghtAraignee; i++)
+            {
+                lesEnnemisAraignee[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAraignee[i].GetComponent<AI>().enabled = false;
+            }*/
+
         }
 
     }// FIN DU UPDATE
@@ -154,7 +182,7 @@ public class ControlerPersonnage : MonoBehaviour
         if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
         {
             panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
-            Camera.main.gameObject.GetComponent<Animator>().enabled = true;
+          //  Camera.main.gameObject.GetComponent<Animator>().enabled = true;
             //Wait for seconds pour desactiver le animator
             // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
 
@@ -162,11 +190,14 @@ public class ControlerPersonnage : MonoBehaviour
             if (infoCollision.gameObject.name == "ennemiAbeille")
             {
                 NiveauVie -= 5;
+                print("TOUCHE ABEILLE");
+                print("Niveau vie " +NiveauVie);
             }
 
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
             if (infoCollision.gameObject.name == "ennemiAraignee")
             {
+                print("TOUCHE araignee");
                 NiveauVie -= 20;
             }
 
@@ -182,52 +213,130 @@ public class ControlerPersonnage : MonoBehaviour
         }
     }
 
-     void OnTriggerEnter(Collider infoCollision)
+     void OnTriggerStay(Collider other)
     {
-        if(infoCollision.gameObject.name == "colliderAraignee")
+        if (GestionCamera.pause == false)
         {
-            print("ENTRE");
-            lesEnnemis =
-
-            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
-            var ennLenght = lesEnnemis.Length;
-            for (var i = 0; i < ennLenght; i++)
+            //print(" PAUSE == FALSE ?????????????????????????????");
+            if (other.gameObject.name == "colliderAraignee")
             {
-                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
-                lesEnnemis[i].GetComponent<AI>().enabled = true;
+                // print("ENTRE");
+                lesEnnemis =
+
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
+            }
+
+            if (other.gameObject.name == "colliderAbeille")
+            {
+                //print("ENTRE");
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
+            }
+
+            if (other.gameObject.name == "colliderArbre")
+            {
+                // print("ENTRE");
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
             }
         }
-
-        if (infoCollision.gameObject.name == "colliderAbeille")
+        else
         {
-            print("ENTRE");
-            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
-            var ennLenght = lesEnnemis.Length;
-            for (var i = 0; i < ennLenght; i++)
-            {
-                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
-                lesEnnemis[i].GetComponent<AI>().enabled = true;
-            }
-        }
 
-        if (infoCollision.gameObject.name == "colliderArbre")
-        {
-            print("ENTRE");
-            lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
-            var ennLenght = lesEnnemis.Length;
-            for (var i = 0; i < ennLenght; i++)
+          //  print(" PAUSE == TRUE !!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //les ennemis en pause
+            var lesEnnemisAbres = GameObject.FindGameObjectsWithTag("ennemiArbre");
+            var ennLenghtArbre = lesEnnemisAbres.Length;
+            for (var i = 0; i < ennLenghtArbre; i++)
             {
-                lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
-                lesEnnemis[i].GetComponent<AI>().enabled = true;
+                lesEnnemisAbres[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAbres[i].GetComponent<AI>().enabled = false;
             }
+
+            var lesEnnemisAbeille = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+            var ennLenghtAbeille = lesEnnemisAbeille.Length;
+            for (var i = 0; i < ennLenghtAbeille; i++)
+            {
+                lesEnnemisAbeille[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAbeille[i].GetComponent<AI>().enabled = false;
+            }
+
+            var lesEnnemisAraignee = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+            var ennLenghtAraignee = lesEnnemisAraignee.Length;
+            for (var i = 0; i < ennLenghtAraignee; i++)
+            {
+                lesEnnemisAraignee[i].GetComponent<NavMeshAgent>().enabled = false;
+                lesEnnemisAraignee[i].GetComponent<AI>().enabled = false;
+            }
+
         }
+    }
+
+    void OnTriggerEnter(Collider infoCollision)
+    {
+     
+            if (infoCollision.gameObject.name == "colliderAraignee")
+            {
+               // print("ENTRE");
+                lesEnnemis =
+
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
+            }
+
+            if (infoCollision.gameObject.name == "colliderAbeille")
+            {
+                //print("ENTRE");
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
+            }
+
+            if (infoCollision.gameObject.name == "colliderArbre")
+            {
+               // print("ENTRE");
+                lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
+                var ennLenght = lesEnnemis.Length;
+                for (var i = 0; i < ennLenght; i++)
+                {
+                    lesEnnemis[i].GetComponent<NavMeshAgent>().enabled = true;
+                    lesEnnemis[i].GetComponent<AI>().enabled = true;
+                }
+            }
+        
+
     }
 
     void OnTriggerExit(Collider infoCollision)
     {
         if (infoCollision.gameObject.name == "colliderAraignee")
         {
-            print("SORT");
+            //print("SORT");
             lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAraignee");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
@@ -239,7 +348,7 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "colliderAbeille")
         {
-            print("SORT");
+           // print("SORT");
             lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiAbeille");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
@@ -251,7 +360,7 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "colliderArbre")
         {
-            print("SORT");
+            // print("SORT");
             lesEnnemis = GameObject.FindGameObjectsWithTag("ennemiArbre");
             var ennLenght = lesEnnemis.Length;
             for (var i = 0; i < ennLenght; i++)
