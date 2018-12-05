@@ -2214,7 +2214,7 @@ MonoBehaviour:
   cible: {fileID: 1329988914}
   camera: {fileID: 558462728}
   hauteurPivot: 0.2
-  hauteurZ: 0.2
+  hauteurZ: -0.5
 --- !u!95 &602389090
 Animator:
   serializedVersion: 3
@@ -19131,7 +19131,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581681107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: de419d703bd75284ca532d8c46241290, type: 2}
   m_CullingMode: 0
