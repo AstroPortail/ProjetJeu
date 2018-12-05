@@ -15,10 +15,8 @@ public class CameraSurvole : MonoBehaviour {
     // Update is called once per frame
     void Update() 
         {
-            
-
-            print(Screen.width); // 859/2=429.5
-            print(Screen.height); // 483/2=241.5
+           // print(Screen.width); // 859/2=429.5
+            //print(Screen.height); // 483/2=241.5
 
             if (Input.mousePosition.x >= Screen.width / 2)
             {
