@@ -158,8 +158,6 @@ public class ControlerPersonnage : MonoBehaviour
             //Wait for seconds pour desactiver le animator
             // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
 
-            // estMort = true;
-
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
             if (infoCollision.gameObject.name == "ennemiAbeille")
             {
@@ -180,7 +178,7 @@ public class ControlerPersonnage : MonoBehaviour
                 print("toucheArbre");
             }
 
-            print("niveauVie = " + NiveauVie);
+           // print("niveauVie = " + NiveauVie);
         }
     }
 
