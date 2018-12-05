@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VerifSon : MonoBehaviour {
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     // Use this for initialization
     void Start () {
