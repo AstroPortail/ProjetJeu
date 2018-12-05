@@ -10,8 +10,8 @@ public class VerifSon : MonoBehaviour {
         print("leSon est a mute = " + MuteMusic.sonMute);
 
         if (MuteMusic.sonMute == true) {
-            print("QUEQUOUUU");
-            laMusiqua.Pause();
+            print(laMusiqua.mute);
+            laMusiqua.mute=true;
         }
 	}
 	
