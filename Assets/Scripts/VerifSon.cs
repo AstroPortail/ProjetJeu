@@ -7,6 +7,7 @@ public class VerifSon : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        print("leSon est a mute = " + MuteMusic.sonMute);
 		if (MuteMusic.sonMute ==true) {
 
             audioSource.Pause();
