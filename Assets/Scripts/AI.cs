@@ -14,9 +14,14 @@ public class AI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GetComponent<NavMeshAgent>().SetDestination(cible.transform.position);
-        if (GetComponent<NavMeshAgent>().velocity.magnitude >= 0.1f)
+        GetComponent<Animator>().SetFloat("vitesse", GetComponent<NavMeshAgent>().velocity.magnitude);
+
+        float dist = Vector3.Distance(cible.transform.position, transform.position);
+        print("La Distance = " + dist);
+        if (dist <= 3)
         {
-            GetComponent<Animator>().SetFloat("vitesse",1);
+            GetComponent<Animator>().SetTrigger("estProche");
         }
+       
     }
 }
