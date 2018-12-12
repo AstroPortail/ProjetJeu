@@ -36,6 +36,5 @@ public class instEnnemis : MonoBehaviour
             nouvelEnnemis.SetActive(true);
             nouvelEnnemis.transform.position = new Vector3(positionOrigineX, positionOrigineY, positionOrigineZ);
             nombreEnnemis++;
-            print("le nombre d'ennemis : " + nombreEnnemis);
     }
 }

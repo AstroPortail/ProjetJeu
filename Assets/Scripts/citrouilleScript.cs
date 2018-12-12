@@ -16,7 +16,6 @@ public class citrouilleScript : MonoBehaviour {
     {
         for (var iEnum = 0; iEnum < CitrouilleTableauMeshObjets.Length; iEnum++)
         {
-            print(iEnum);
             CitrouilleTableauMeshObjets[iEnum].enabled = false;
         }
         GameObject.Find("citrouilleAsset").transform.position = new Vector3(Random.Range(2f, 93f), 20, Random.Range(2f, 93f));
