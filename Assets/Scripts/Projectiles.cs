@@ -50,13 +50,13 @@ public class Projectiles : MonoBehaviour {
             Invoke("TirerBalle", 0.1f);
             peutTirer = false;
             animPersoTir.SetTrigger("animTir");
-            print("Click gauche souris");
+            //print("Click gauche souris");
 
-            if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
-            {
+          
                  GameObject cloneParticule = Instantiate(particuleTir, transform.position, transform.rotation);
+                
                 //DestroyImmediate(particuleTir);
-             }
+             
         }
     }
 
@@ -65,6 +65,7 @@ public class Projectiles : MonoBehaviour {
     {
         particuleTir.SetActive(true);
         Invoke("DesactiveBalle", 0.5f);
+        //   cloneParticule.GetComponent<Rigidbody>().velocity = transform.forward * vitesseParticuleTir;
     }
 
     //function qui  désactive la balle
