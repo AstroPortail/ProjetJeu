@@ -28,6 +28,7 @@ public class ControlerPersonnage : MonoBehaviour
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
     public static bool estMort = false;
+    public GameObject imgagePortailEte;
     public Text textNombrePiece;
     public Image imageBarreVie;
     public Image imageBarreOxy;
@@ -135,6 +136,7 @@ public class ControlerPersonnage : MonoBehaviour
         {
             cadeauRamasse = true;
             Countdown.totalTime += 15f;
+            imgagePortailEte.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             GameObject son = GameObject.Find("sonCadeau");
             son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
