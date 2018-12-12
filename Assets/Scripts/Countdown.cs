@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    public static float totalTime = 120f; //2 minutes
+    public static float totalTime = 5f; //2 minutes
     public Text timer;
-    public Text niveauSphereTexte;
     public static int niveauSphere;
+    public GameObject[] lesNiveau;
     public int minutes;
     public int seconds;
 
@@ -18,6 +18,8 @@ public class Countdown : MonoBehaviour
     private void Start()
     {
         niveauSphere = Random.Range(0, 3);
+        print("leNiveau = " + niveauSphere);
+        lesNiveau[niveauSphere].SetActive(true);
 
     }
 
@@ -33,10 +35,14 @@ public class Countdown : MonoBehaviour
         if (minutes == 0 && seconds == 0)
         {
             niveauSphere = Random.Range(0, 3);
-            
-            totalTime = 120f;
-            print("leNiveau = " + niveauSphere);
-            print(totalTime);
+            totalTime = 5f;
+
+            for (var iCompteur = 0; iCompteur < lesNiveau.Length; iCompteur++)
+            {
+                lesNiveau[iCompteur].SetActive(false);
+            }
+
+            lesNiveau[niveauSphere].SetActive(true);
         }
     }
 
