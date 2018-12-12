@@ -1448,7 +1448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 595803052}
-  camera: {fileID: 941470029}
   hauteurPivot: 2.5
   hauteurZ: 0
 --- !u!1 &154643844
@@ -10339,6 +10338,8 @@ MonoBehaviour:
   - {fileID: 125458095}
   - {fileID: 1418191208}
   - {fileID: 1443155203}
+  LaSphere: {fileID: 1915085978}
+  sceneEnCours: 
   minutes: 0
   seconds: 0
 --- !u!114 &595803058
@@ -16259,6 +16260,10 @@ Prefab:
         type: 2}
       propertyPath: valeurY
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502572335457206, guid: 15e8fcdb3ae0faf4e8027d2405f850d3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15e8fcdb3ae0faf4e8027d2405f850d3, type: 2}
@@ -24505,6 +24510,11 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000008470961, y: 0.0011934831, z: -0.0002259718}
     m_Extent: {x: 0.0022412618, y: 0.0028217828, z: 0.001599066}
   m_DirtyAABB: 0
+--- !u!1 &1915085978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502572335457206, guid: 15e8fcdb3ae0faf4e8027d2405f850d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250802288}
 --- !u!1 &1978352996
 GameObject:
   m_ObjectHideFlags: 0

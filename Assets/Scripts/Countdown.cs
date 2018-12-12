@@ -11,6 +11,8 @@ public class Countdown : MonoBehaviour
     public Text timer;
     public static int niveauSphere;
     public GameObject[] lesNiveau;
+    public GameObject LaSphere;
+    public string sceneEnCours;
     public int minutes;
     public int seconds;
 
@@ -18,8 +20,8 @@ public class Countdown : MonoBehaviour
     private void Start()
     {
         niveauSphere = Random.Range(0, 3);
-        print("leNiveau = " + niveauSphere);
         lesNiveau[niveauSphere].SetActive(true);
+        sceneEnCours = SceneManager.GetActiveScene().name;
 
     }
 
@@ -43,6 +45,19 @@ public class Countdown : MonoBehaviour
             }
 
             lesNiveau[niveauSphere].SetActive(true);
+        }
+
+        if (sceneEnCours == "Automne" && niveauSphere == 0)
+        {
+            LaSphere.SetActive(true);
+        }
+        else if (sceneEnCours == "HiverHelo" && niveauSphere == 1)
+        {
+            LaSphere.SetActive(true);
+        }
+        else if (sceneEnCours == "EteLaurence" && niveauSphere == 2)
+        {
+            LaSphere.SetActive(true);
         }
     }
 
