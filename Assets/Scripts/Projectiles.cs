@@ -31,7 +31,7 @@ public class Projectiles : MonoBehaviour {
         {
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
-            transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
+           // transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
 
         }
@@ -44,17 +44,11 @@ public class Projectiles : MonoBehaviour {
             animPersoTir.SetTrigger("animTir");
             print("Click gauche souris");
 
-           // if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
-           // {
-             //   if (infoCollision.collider.tag == "ennemi")
-               // {
-                  //  infoCollision.collider.gameObject.GetComponent<AI>().Touche(); //(FONCTION qui tue le personnage et active le son du personnage ennemi)
-
-            //    }
-
-                // GameObject cloneParticule = Instantiate(particuleContact, transform.position, transform.rotation);
-              //  DestroyImmediate(particuleContact);
-           // }
+          //  if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
+            //{
+              //   GameObject cloneParticule = Instantiate(particuleTir, transform.position, transform.rotation);
+                //DestroyImmediate(particuleTir);
+            // }
         }
     }
 

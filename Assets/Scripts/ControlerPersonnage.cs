@@ -70,7 +70,7 @@ public class ControlerPersonnage : MonoBehaviour
             GestionOxygene();
             GestionVie();
 
-          //  transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
+            transform.Rotate(0, Input.GetAxis("Horizontal"), 0); // la rotation sur l'axe horizontal
 
             vDeplacement = Input.GetAxis("Vertical") * vitesseDeplacement; // vitesse de déplacement sur l'axe verticale
 
@@ -90,31 +90,6 @@ public class ControlerPersonnage : MonoBehaviour
         else
         {
             animPerso.SetFloat("vitesseDep", 0); // le personnage en pause
-
-            //les ennemis en pause
-           /* var lesEnnemisAbres = GameObject.FindGameObjectsWithTag("ennemiArbre");
-            var ennLenghtArbre = lesEnnemisAbres.Length;
-            for (var i = 0; i < ennLenghtArbre; i++)
-            {
-                lesEnnemisAbres[i].GetComponent<NavMeshAgent>().enabled = false;
-                lesEnnemisAbres[i].GetComponent<AI>().enabled = false;
-            }
-
-            var lesEnnemisAbeille = GameObject.FindGameObjectsWithTag("ennemiAbeille");
-            var ennLenghtAbeille = lesEnnemisAbeille.Length;
-            for (var i = 0; i < ennLenghtAbeille; i++)
-            {
-                lesEnnemisAbeille[i].GetComponent<NavMeshAgent>().enabled = false;
-                lesEnnemisAbeille[i].GetComponent<AI>().enabled = false;
-            }
-
-            var lesEnnemisAraignee = GameObject.FindGameObjectsWithTag("ennemiAraignee");
-            var ennLenghtAraignee = lesEnnemisAraignee.Length;
-            for (var i = 0; i < ennLenghtAraignee; i++)
-            {
-                lesEnnemisAraignee[i].GetComponent<NavMeshAgent>().enabled = false;
-                lesEnnemisAraignee[i].GetComponent<AI>().enabled = false;
-            }*/
 
         }
 
@@ -181,7 +156,7 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
         {
-            panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
+          //  panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
           //  Camera.main.gameObject.GetComponent<Animator>().enabled = true;
             //Wait for seconds pour desactiver le animator
             // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents

@@ -10,7 +10,7 @@ using UnityEngine;
 public class CameraTroisPers : MonoBehaviour {
 
     public GameObject cible; // le personnage
-    public GameObject camera; // la camera enfant du pivot
+// public GameObject camera; // la camera enfant du pivot
 
     public float hauteurPivot; // hauteur de l'étiquette
     public float hauteurZ; // hauteur de l'étiquette
@@ -21,12 +21,12 @@ public class CameraTroisPers : MonoBehaviour {
     {
         transform.position = cible.transform.position + new Vector3(0, hauteurPivot, hauteurZ);// par rapport au monde
         //transform.position = cible.transform.TransformPoint(0, hauteurPivot, hauteurZ);
-        transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+        //transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
         //Annuler la rotation en Z
-         transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        // transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
         //  transform.eulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //Caméra regarde le pivot
-        transform.LookAt(cible.transform);
+       // transform.LookAt(cible.transform);
        // camera.transform.LookAt(cible.transform.position);
         // rayCastcameraPivot.transform.LookAt(transform);
     }
