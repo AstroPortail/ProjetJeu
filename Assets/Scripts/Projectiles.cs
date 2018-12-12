@@ -29,10 +29,17 @@ public class Projectiles : MonoBehaviour {
 
         if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollision, 5000, LayerMask.GetMask("Terrain")))
         {
+        
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
-           // transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
-            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+            var distancePersoSouris = Vector3.Distance(transform.position, infoCollision.point);
+            print(distancePersoSouris);
+            if (distancePersoSouris >= 1)
+            {
+                transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
+                transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+            }
+            
 
         }
 
@@ -44,11 +51,11 @@ public class Projectiles : MonoBehaviour {
             animPersoTir.SetTrigger("animTir");
             print("Click gauche souris");
 
-          //  if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
-            //{
-              //   GameObject cloneParticule = Instantiate(particuleTir, transform.position, transform.rotation);
+            if (Physics.Raycast(gun.transform.position, transform.forward, out infoCollision, 30))
+            {
+                 GameObject cloneParticule = Instantiate(particuleTir, transform.position, transform.rotation);
                 //DestroyImmediate(particuleTir);
-            // }
+             }
         }
     }
 

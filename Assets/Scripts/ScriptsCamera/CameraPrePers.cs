@@ -10,7 +10,6 @@ using UnityEngine;
 public class CameraPrePers : MonoBehaviour {
 
     public GameObject cible; // le personnage
-    public GameObject camera; // la camera enfant du pivot
 
     public float hauteurPivot; // hauteur de l'étiquette
     public float positionXPivot; // position x de l'étiquette
@@ -21,7 +20,7 @@ public class CameraPrePers : MonoBehaviour {
     void Update()
     {
         transform.position = cible.transform.position + new Vector3(positionXPivot, hauteurPivot, positionZPivot);
-        transform.Rotate(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+        transform.Rotate(50, Input.GetAxis("Mouse X"), 0);
         //Annuler la rotation en Z
         transform.eulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //Caméra regarde le pivot

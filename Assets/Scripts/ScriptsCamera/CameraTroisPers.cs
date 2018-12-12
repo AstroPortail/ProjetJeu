@@ -14,20 +14,21 @@ public class CameraTroisPers : MonoBehaviour {
 
     public float hauteurPivot; // hauteur de l'étiquette
     public float hauteurZ; // hauteur de l'étiquette
+    public float positionXPivot; // position x de l'étiquette
 
     // Position le pivot de la caméra au même endroit que le personnage + une certaine hauteur (prêt de la tête)
     // le pivot tourne par le déplacement de la souris en X et Y
     void Update()
     {
-        transform.position = cible.transform.position + new Vector3(0, hauteurPivot, hauteurZ);// par rapport au monde
-        //transform.position = cible.transform.TransformPoint(0, hauteurPivot, hauteurZ);
-        //transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+        transform.position = cible.transform.position + new Vector3(positionXPivot, hauteurPivot, hauteurZ);// par rapport au monde
+        // transform.position = cible.transform.TransformPoint(0, hauteurPivot, hauteurZ);
+       // transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
         //Annuler la rotation en Z
-        // transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+         transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
         //  transform.eulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //Caméra regarde le pivot
-       // transform.LookAt(cible.transform);
-       // camera.transform.LookAt(cible.transform.position);
+            transform.LookAt(cible.transform);
+        //camera.transform.LookAt(cible.transform.position);
         // rayCastcameraPivot.transform.LookAt(transform);
     }
 }
