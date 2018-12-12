@@ -154,15 +154,16 @@ public class ControlerPersonnage : MonoBehaviour
             Destroy(infoCollision.gameObject);
         }
 
-        if (infoCollision.gameObject.name == "ennemiAbeille" || infoCollision.gameObject.name == "ennemiAraignee" || infoCollision.gameObject.name == "ennemiArbre")
+        if (infoCollision.gameObject.name == "ennemiAbeille(Clone)" || infoCollision.gameObject.name == "ennemiAraignee(Clone)" || infoCollision.gameObject.name == "ennemiArbre(Clone)")
         {
-          //  panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
-          //  Camera.main.gameObject.GetComponent<Animator>().enabled = true;
+            print("ennemiTouche");
+            panneauTouche.SetActive(true); // quand un ennemi touche le personne un panneau rouge dans l'écran du joueur s'active et a la fin de son animation se désactive
+            //Camera.main.gameObject.GetComponent<Animator>().enabled = true;
             //Wait for seconds pour desactiver le animator
-            // Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
+            //Mettre les rotations de la cameras a 0 et jouer avec ceux du parents
 
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
-            if (infoCollision.gameObject.name == "ennemiAbeille")
+            if (infoCollision.gameObject.name == "ennemiAbeille(Clone)")
             {
                 NiveauVie -= 5;
                 print("TOUCHE ABEILLE");
@@ -170,14 +171,14 @@ public class ControlerPersonnage : MonoBehaviour
             }
 
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
-            if (infoCollision.gameObject.name == "ennemiAraignee")
+            if (infoCollision.gameObject.name == "ennemiAraignee(Clone)")
             {
                 print("TOUCHE araignee");
                 NiveauVie -= 20;
             }
 
             // vérifier quel type d'ennemis et baisser la vie en conséquence 
-            if (infoCollision.gameObject.name == "ennemiArbre")
+            if (infoCollision.gameObject.name == "ennemiArbre(Clone)")
             {
                 NiveauVie -= 35;
 

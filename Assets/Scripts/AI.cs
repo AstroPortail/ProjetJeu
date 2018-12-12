@@ -17,7 +17,6 @@ public class AI : MonoBehaviour {
         GetComponent<Animator>().SetFloat("vitesse", GetComponent<NavMeshAgent>().velocity.magnitude);
 
         float dist = Vector3.Distance(cible.transform.position, transform.position);
-        print("La Distance = " + dist);
         if (dist <= 3)
         {
             GetComponent<Animator>().SetTrigger("estProche");
