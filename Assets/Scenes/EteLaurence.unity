@@ -1026,6 +1026,51 @@ Transform:
   m_Father: {fileID: 1302525652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &274979839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274979840}
+  - component: {fileID: 274979841}
+  m_Layer: 0
+  m_Name: cameraPremierePersonne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &274979840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274979839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1581681108}
+  m_Father: {fileID: 1013959596}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &274979841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274979839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90bc113a2b4549bea66544751a8a9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cible: {fileID: 1329988914}
+  hauteurPivot: 2.5
+  positionXPivot: 0
+  positionZPivot: 0
 --- !u!1 &328538533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1005728379472152, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
@@ -1127,6 +1172,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &338160747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338160748}
+  - component: {fileID: 338160749}
+  m_Layer: 0
+  m_Name: PointlLightSurvole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &338160748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338160747}
+  m_LocalRotation: {x: -0, y: 0.17718571, z: -0, w: 0.9841775}
+  m_LocalPosition: {x: 0.0022213333, y: 0.45, z: -0.01805963}
+  m_LocalScale: {x: 0.43801567, y: 0.43801564, z: 0.43801567}
+  m_Children: []
+  m_Father: {fileID: 1329988919}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &338160749
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338160747}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0, g: 0.9413085, b: 1, a: 1}
+  m_Intensity: 10
+  m_Range: 20
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &380085858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,7 +2023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558462729
 Transform:
   m_ObjectHideFlags: 0
@@ -1925,7 +2036,7 @@ Transform:
   m_LocalScale: {x: 0.8000001, y: 0.7999998, z: 0.7999998}
   m_Children: []
   m_Father: {fileID: 1013959596}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 16.174002, y: 20.412, z: 0}
 --- !u!92 &558462730
 Behaviour:
@@ -17339,8 +17450,8 @@ Transform:
   m_Children:
   - {fileID: 1063257545}
   - {fileID: 550926406}
-  - {fileID: 1581681108}
   - {fileID: 558462729}
+  - {fileID: 274979840}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18198,6 +18309,7 @@ MonoBehaviour:
   imageCadeau: {fileID: 2060557701}
   imageCitrouille: {fileID: 1111812197}
   imageChampi: {fileID: 660645170}
+  lumierePause: {fileID: 338160747}
   lesEnnemis: []
   panneauOxygene: {fileID: 2127967683}
   panneauVie: {fileID: 328538533}
@@ -18265,6 +18377,7 @@ Transform:
   - {fileID: 1389375131}
   - {fileID: 102075120}
   - {fileID: 911301774}
+  - {fileID: 338160748}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -20.412, z: 0}
@@ -18281,6 +18394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 1035874559}
   lesNiveau: []
+  LaSphere: {fileID: 0}
+  sceneEnCours: 
   minutes: 0
   seconds: 0
 --- !u!114 &1329988921
@@ -19010,7 +19125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1581681108
 Transform:
   m_ObjectHideFlags: 0
@@ -19018,13 +19133,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581681107}
-  m_LocalRotation: {x: 0.13201725, y: -0, z: -0, w: 0.9912475}
-  m_LocalPosition: {x: 68.500694, y: 10.465276, z: 41.32966}
-  m_LocalScale: {x: 0.79999995, y: 0.7999996, z: 0.7999996}
+  m_LocalRotation: {x: 0.23344536, y: 0, z: 0, w: 0.97236997}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999965, z: 0.79999965}
   m_Children: []
-  m_Father: {fileID: 1013959596}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 15.172001, y: 0, z: 0}
+  m_Father: {fileID: 274979840}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 27, y: 0, z: 0}
 --- !u!92 &1581681109
 Behaviour:
   m_ObjectHideFlags: 0
@@ -19098,7 +19213,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581681107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a90bc113a2b4549bea66544751a8a9df, type: 3}
   m_Name: 

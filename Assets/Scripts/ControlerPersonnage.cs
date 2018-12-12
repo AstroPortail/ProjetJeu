@@ -35,6 +35,8 @@ public class ControlerPersonnage : MonoBehaviour
     public GameObject imageCitrouille;
     public GameObject imageChampi;
 
+    public GameObject lumierePause;
+
     public GameObject[] lesEnnemis;
 
     public GameObject panneauOxygene;
@@ -61,6 +63,7 @@ public class ControlerPersonnage : MonoBehaviour
         //print("niveauVie=" + NiveauOxygene);
         //------------- GESTION DU PERSONNAGE ---------------------//
         if (GestionCamera.pause == false) {
+            lumierePause.SetActive(false);
             // ----------- ON VÉRIFIE SI LE PERSO EST MORT ------------ //
             verifierSiEnVie();
 
@@ -89,6 +92,7 @@ public class ControlerPersonnage : MonoBehaviour
         }
         else
         {
+            lumierePause.SetActive(true);
             animPerso.SetFloat("vitesseDep", 0); // le personnage en pause
 
         }

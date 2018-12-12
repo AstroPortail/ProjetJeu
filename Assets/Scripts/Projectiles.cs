@@ -34,6 +34,7 @@ public class Projectiles : MonoBehaviour {
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
             var distancePersoSouris = Vector3.Distance(transform.position, infoCollision.point);
             print(distancePersoSouris);
+
             if (distancePersoSouris >= 1)
             {
                 transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
