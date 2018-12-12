@@ -187,13 +187,18 @@ public class ControlerPersonnage : MonoBehaviour
 
            // print("niveauVie = " + NiveauVie);
         }
+
+        if (infoCollision.gameObject.name == "sphere" && champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true)
+        {
+
+            SceneManager.LoadScene("EcranIntro");
+        }
     }
 
      void OnTriggerStay(Collider other)
     {
         if (GestionCamera.pause == false)
         {
-            //print(" PAUSE == FALSE ?????????????????????????????");
             if (other.gameObject.name == "colliderAraignee")
             {
                 // print("ENTRE");
@@ -235,8 +240,6 @@ public class ControlerPersonnage : MonoBehaviour
         else
         {
 
-          //  print(" PAUSE == TRUE !!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            //les ennemis en pause
             var lesEnnemisAbres = GameObject.FindGameObjectsWithTag("ennemiArbre");
             var ennLenghtArbre = lesEnnemisAbres.Length;
             for (var i = 0; i < ennLenghtArbre; i++)

@@ -1450,6 +1450,7 @@ MonoBehaviour:
   cible: {fileID: 595803052}
   hauteurPivot: 2.5
   hauteurZ: 0
+  positionXPivot: 0
 --- !u!1 &154643844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4882,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1423752913193316, guid: c8a326ae51020824abbca94a8636757d,
     type: 2}
   m_PrefabInternal: {fileID: 637225106}
+--- !u!114 &400740585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114651759235427438, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 637225106}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &425272501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,6 +4958,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1307368033066934, guid: c8a326ae51020824abbca94a8636757d,
     type: 2}
   m_PrefabInternal: {fileID: 637225106}
+--- !u!114 &474194498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114868226080865898, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 637225106}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &492313958
 GameObject:
   m_ObjectHideFlags: 0
@@ -10362,6 +10375,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1378154584450382, guid: c8a326ae51020824abbca94a8636757d,
     type: 2}
   m_PrefabInternal: {fileID: 637225106}
+--- !u!114 &612619923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114225497391149668, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 637225106}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &629361104
 GameObject:
   m_ObjectHideFlags: 0
@@ -11121,7 +11140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 595803052}
-  camera: {fileID: 1189857732}
   hauteurPivot: 0
   positionXPivot: 0
   positionZPivot: 0
@@ -24515,6 +24533,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1502572335457206, guid: 15e8fcdb3ae0faf4e8027d2405f850d3,
     type: 2}
   m_PrefabInternal: {fileID: 1250802288}
+--- !u!135 &1915085979
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915085978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.10388176
+  m_Center: {x: -0.00042079017, y: -0.00037381425, z: -0.00017945468}
 --- !u!1 &1978352996
 GameObject:
   m_ObjectHideFlags: 0
@@ -25014,9 +25044,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneEnCours: 
   estTrouve: 0
-  cadeau: {fileID: 0}
-  champi: {fileID: 0}
-  citrouille: {fileID: 0}
+  cadeau: {fileID: 400740585}
+  champi: {fileID: 474194498}
+  citrouille: {fileID: 612619923}
 --- !u!82 &2145539474
 AudioSource:
   m_ObjectHideFlags: 0
