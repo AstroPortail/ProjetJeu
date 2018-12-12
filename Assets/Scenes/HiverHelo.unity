@@ -1451,6 +1451,7 @@ MonoBehaviour:
   cible: {fileID: 595803052}
   camera: {fileID: 941470029}
   hauteurPivot: 2.5
+  hauteurZ: 0
 --- !u!1 &154643844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +5663,26 @@ CapsuleCollider:
   m_Height: 1.1592561
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &541678181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433312022491876, guid: 6d2b313075d2fe24da4c9546e2de8fea,
+    type: 2}
+  m_PrefabInternal: {fileID: 512236971}
+--- !u!114 &541678182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541678181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d737c970a05356c43affa48adbc4ebf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceEnnemis: {fileID: 14477072}
+  positionOrigineX: 46.81643
+  positionOrigineY: 15.8644
+  positionOrigineZ: 52.31287
 --- !u!1 &560049179
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,7 +10715,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &807238388
 GameObject:
@@ -17021,50 +17042,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1389513317949196, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
     type: 2}
   m_PrefabInternal: {fileID: 1410242910}
---- !u!1 &1416248180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1416248182}
-  - component: {fileID: 1416248181}
-  m_Layer: 0
-  m_Name: instanciationEnnemis
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1416248181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1416248180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d737c970a05356c43affa48adbc4ebf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrayEnnemis:
-  - {fileID: 1492194386}
-  - {fileID: 229227850}
-  - {fileID: 14477072}
---- !u!4 &1416248182
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1416248180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.757473, y: 4.273981, z: 5.8461456}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1492194385
 Prefab:
   m_ObjectHideFlags: 0
@@ -19106,6 +19083,26 @@ Transform:
   m_Father: {fileID: 1679177404}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1551479455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433312022491876, guid: 6d2b313075d2fe24da4c9546e2de8fea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1318286857}
+--- !u!114 &1551479456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551479455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d737c970a05356c43affa48adbc4ebf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceEnnemis: {fileID: 229227850}
+  positionOrigineX: 94
+  positionOrigineY: 18.14504
+  positionOrigineZ: 7.702995
 --- !u!1 &1627616043
 GameObject:
   m_ObjectHideFlags: 0
@@ -19175,6 +19172,26 @@ Transform:
   m_Father: {fileID: 1877872734}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1671751593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433312022491876, guid: 6d2b313075d2fe24da4c9546e2de8fea,
+    type: 2}
+  m_PrefabInternal: {fileID: 113913761}
+--- !u!114 &1671751594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671751593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d737c970a05356c43affa48adbc4ebf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceEnnemis: {fileID: 1492194386}
+  positionOrigineX: 10.06939
+  positionOrigineY: 16.00423
+  positionOrigineZ: 89.84369
 --- !u!1 &1673439304
 GameObject:
   m_ObjectHideFlags: 0
