@@ -32,7 +32,6 @@ public class Countdown : MonoBehaviour
 
     private void Update()
     {
-        LaSphere = GameObject.Find("sphere");
         // on arette le temps si le jeu est en pause
         if (GestionCamera.pause == false)
         {

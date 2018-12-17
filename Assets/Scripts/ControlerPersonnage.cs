@@ -29,7 +29,8 @@ public class ControlerPersonnage : MonoBehaviour
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
     public static bool estMort = false;
-    public GameObject imgagePortailEte;
+    public GameObject panneauAvertissement;
+    public Text avertissement;
     public Text textNombrePiece;
     public Image imageBarreVie;
     public Image imageBarreOxy;
@@ -203,7 +204,7 @@ public class ControlerPersonnage : MonoBehaviour
                 SceneManager.LoadScene("SceneFin");
             } else
             {
-                print("Vous devez récuperer les objets");
+                StartCoroutine(ActivePanneauAvertissement());
             }
             
         }
@@ -445,6 +446,14 @@ public class ControlerPersonnage : MonoBehaviour
             estMort = false;
 
         }
+    }
+
+    IEnumerator ActivePanneauAvertissement()
+    {
+        panneauAvertissement.SetActive(true);
+        avertissement.text = "Vous devez amasser tous les objets obligatoires avant d'attrapper la sphère !";
+        yield return new WaitForSeconds(5);
+        panneauAvertissement.SetActive(false);
     }
 
 
