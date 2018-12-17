@@ -22,9 +22,10 @@ public class ControlerPersonnage : MonoBehaviour
 
     /* -------- Variable pour les objets dynamique ------------------- */
     public static float nombrePiece;
-    public static bool cadeauRamasse = true;
-    public static bool citrouilleRamasse = true;
-    public static bool champiRamasse = true;
+    public static bool cadeauRamasse = false;
+    public static bool citrouilleRamasse = false;
+    public static bool champiRamasse = false;
+    public static bool sphereAttrape = false;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
     public static bool estMort = false;
@@ -194,10 +195,17 @@ public class ControlerPersonnage : MonoBehaviour
            // print("niveauVie = " + NiveauVie);
         }
 
-        if (infoCollision.gameObject.name == "sphere" && champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true)
+        if (infoCollision.gameObject.name == "sphere")
         {
-
-            SceneManager.LoadScene("EcranIntro");
+            if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true)
+            {
+                sphereAttrape = true;
+                SceneManager.LoadScene("SceneFin");
+            } else
+            {
+                print("Vous devez récuperer les objets");
+            }
+            
         }
     }
 
