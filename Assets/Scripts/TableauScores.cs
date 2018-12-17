@@ -15,8 +15,22 @@ public class TableauScores : MonoBehaviour {
     
 
     void Start () {
-        //ChangementScenePortail.champNomJoueur.text="Kim";
+        //ChangementScenePortail.leNomDuJoueur = "Kim";
         //ControlerPersonnage.NiveauOxygene=10;
+
+        PlayerPrefs.DeleteKey("FichierScores"); //Effacer les données précédemment enregistrées
+        PlayerPrefs.DeleteKey("FichierNoms"); //Effacer les données précédemment enregistrées
+
+        bool infoExisteDeja = PlayerPrefs.HasKey("FichierNoms"); //Regarde si valeurs présentes
+        //si valeurs trouvées on affiche 
+        if (infoExisteDeja == true)
+        {
+            //lecture des données 
+            tableauValeursScore = PlayerPrefsX.GetFloatArray("FichierScores");
+            tableauNoms = PlayerPrefsX.GetStringArray("FichierNoms");
+           
+        }
+
         tableauNoms[3] = ChangementScenePortail.leNomDuJoueur;
 
         tableauValeursScore[3] =  ControlerPersonnage.NiveauOxygene;
@@ -28,6 +42,9 @@ public class TableauScores : MonoBehaviour {
         System.Array.Reverse(tableauNoms); //
 
         AfficherElements();
+        //Écriture des données  
+        PlayerPrefsX.SetFloatArray("FichierScores", tableauValeursScore);
+        PlayerPrefsX.SetStringArray("FichierNoms", tableauNoms);
     }
 	
 
@@ -37,7 +54,7 @@ public class TableauScores : MonoBehaviour {
         string chaineScore = "";
         string chaineNoms = "";
 
-        for (int i = 0; i<4; i++)
+        for (int i = 0; i<3; i++)
         {
             chaineScore += tableauValeursScore[i] + "%" + "\n";
             chaineNoms += tableauNoms[i] + "\n";
