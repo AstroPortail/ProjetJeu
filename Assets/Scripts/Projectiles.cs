@@ -34,6 +34,7 @@ public class Projectiles : MonoBehaviour {
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
             var distancePersoSouris = Vector3.Distance(transform.position, infoCollision.point);
+            print(distancePersoSouris);
 
             if (distancePersoSouris >= 1)
             {
@@ -50,11 +51,6 @@ public class Projectiles : MonoBehaviour {
             peutTirer = false;
             animPersoTir.SetTrigger("animTir");
             //print("Click gauche souris");
-
-          
-                 
-                
-                //DestroyImmediate(particuleTir);
              
         }
     }
