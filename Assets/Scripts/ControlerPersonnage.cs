@@ -22,9 +22,9 @@ public class ControlerPersonnage : MonoBehaviour
 
     /* -------- Variable pour les objets dynamique ------------------- */
     public static float nombrePiece;
-    public static bool cadeauRamasse = false;
-    public static bool citrouilleRamasse = false;
-    public static bool champiRamasse = false;
+    public static bool cadeauRamasse = true;
+    public static bool citrouilleRamasse = true;
+    public static bool champiRamasse = true;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
     public static bool estMort = false;
@@ -134,9 +134,9 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "cadeauAsset")
         {
+            print("ToucheCadeau");
             cadeauRamasse = true;
             Countdown.totalTime += 15f;
-            imgagePortailEte.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             GameObject son = GameObject.Find("sonCadeau");
             son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
