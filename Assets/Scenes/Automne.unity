@@ -10322,7 +10322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &544566040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25336,6 +25336,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1502572335457206, guid: 15e8fcdb3ae0faf4e8027d2405f850d3,
     type: 2}
   m_PrefabInternal: {fileID: 965267596}
+--- !u!135 &1721513154
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721513153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.10388176
+  m_Center: {x: -0.00042079017, y: -0.00037381425, z: -0.00017945468}
 --- !u!4 &1730866209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4330690214929498, guid: 6d2b313075d2fe24da4c9546e2de8fea,

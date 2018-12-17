@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    public static float totalTime = 5f; //2 minutes
+    public static float totalTime = 90f; //2 minutes
     public Text timer;
     public static int niveauSphere;
     public GameObject[] lesNiveau;
@@ -43,7 +43,7 @@ public class Countdown : MonoBehaviour
         {
             // on change la sphere de niveau et on redémarre le chrono
             niveauSphere = Random.Range(0, 3);
-            totalTime = 5f;
+            totalTime = 90f;
 
             // on désactive les images
             for (var iCompteur = 0; iCompteur < lesNiveau.Length; iCompteur++)
