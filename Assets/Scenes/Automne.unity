@@ -2552,6 +2552,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d06abe3fc472ff942a75d45e8ba4ef88, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &343809811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886873147847702, guid: d06abe3fc472ff942a75d45e8ba4ef88,
+    type: 2}
+  m_PrefabInternal: {fileID: 343809810}
+--- !u!1 &343809812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1947265892640592, guid: d06abe3fc472ff942a75d45e8ba4ef88,
+    type: 2}
+  m_PrefabInternal: {fileID: 343809810}
+--- !u!1 &343809813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1902390248483806, guid: d06abe3fc472ff942a75d45e8ba4ef88,
+    type: 2}
+  m_PrefabInternal: {fileID: 343809810}
 --- !u!1 &346818581
 GameObject:
   m_ObjectHideFlags: 0
@@ -7634,7 +7649,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 532191609}
-  lesNiveau: []
+  lesNiveau:
+  - {fileID: 343809813}
+  - {fileID: 343809811}
+  - {fileID: 343809812}
   LaSphere: {fileID: 290273597}
   sceneEnCours: 
   minutes: 0

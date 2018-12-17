@@ -18278,6 +18278,16 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1311681378}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1311681381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327308363830878, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1311681378}
+--- !u!1 &1311681382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122117849802574, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1311681378}
 --- !u!114 &1311681383 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114772998347192074, guid: c8a326ae51020824abbca94a8636757d,
@@ -18311,6 +18321,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1311681378}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1311681389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548603893426142, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1311681378}
 --- !u!1 &1329988914
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,7 +18457,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1311681380}
-  lesNiveau: []
+  lesNiveau:
+  - {fileID: 1311681389}
+  - {fileID: 1311681381}
+  - {fileID: 1311681382}
   LaSphere: {fileID: 405571731}
   sceneEnCours: 
   minutes: 0
