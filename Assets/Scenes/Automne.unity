@@ -7613,7 +7613,6 @@ GameObject:
   - component: {fileID: 389944723}
   - component: {fileID: 389944722}
   - component: {fileID: 389944726}
-  - component: {fileID: 389944721}
   - component: {fileID: 389944727}
   m_Layer: 0
   m_Name: PrefabAstro
@@ -7622,26 +7621,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &389944721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 389944720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b739ce72ac6b9fa4b8526f856f3df931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 532191609}
-  lesNiveau:
-  - {fileID: 1615189511}
-  - {fileID: 622378806}
-  - {fileID: 1720851531}
-  LaSphere: {fileID: 1721513153}
-  sceneEnCours: 
-  minutes: 0
-  seconds: 0
 --- !u!114 &389944722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10460,12 +10439,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527399825}
   m_CullTransparentMesh: 0
---- !u!114 &532191609 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114677264223211408, guid: d06abe3fc472ff942a75d45e8ba4ef88,
-    type: 2}
-  m_PrefabInternal: {fileID: 343809810}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &544566039
 GameObject:
   m_ObjectHideFlags: 0
@@ -15232,11 +15205,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4174699158622570, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
     type: 2}
   m_PrefabInternal: {fileID: 607141097}
---- !u!1 &622378806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1886873147847702, guid: d06abe3fc472ff942a75d45e8ba4ef88,
-    type: 2}
-  m_PrefabInternal: {fileID: 343809810}
 --- !u!1 &629241924
 GameObject:
   m_ObjectHideFlags: 0
@@ -25312,11 +25280,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 26fb55e8ae34728499f6f45cd0527c73, type: 3}
---- !u!1 &1615189511 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1902390248483806, guid: d06abe3fc472ff942a75d45e8ba4ef88,
-    type: 2}
-  m_PrefabInternal: {fileID: 343809810}
 --- !u!1 &1633115138
 GameObject:
   m_ObjectHideFlags: 0
@@ -25542,11 +25505,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692243651}
   m_CullTransparentMesh: 0
---- !u!1 &1720851531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1947265892640592, guid: d06abe3fc472ff942a75d45e8ba4ef88,
-    type: 2}
-  m_PrefabInternal: {fileID: 343809810}
 --- !u!1 &1721513153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1502572335457206, guid: 15e8fcdb3ae0faf4e8027d2405f850d3,
