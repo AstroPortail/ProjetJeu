@@ -50,7 +50,6 @@ public class ControlerPersonnage : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         rbPerso = GetComponent<Rigidbody>();
         animPerso = GetComponent<Animator>();
 
