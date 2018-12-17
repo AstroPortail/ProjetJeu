@@ -1444,11 +1444,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 26fb55e8ae34728499f6f45cd0527c73, type: 3}
---- !u!1 &125458095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1548603893426142, guid: c8a326ae51020824abbca94a8636757d,
-    type: 2}
-  m_PrefabInternal: {fileID: 637225106}
 --- !u!1 &154643844
 GameObject:
   m_ObjectHideFlags: 0
@@ -10249,8 +10244,8 @@ GameObject:
   - component: {fileID: 595803055}
   - component: {fileID: 595803054}
   - component: {fileID: 595803053}
-  - component: {fileID: 595803057}
   - component: {fileID: 595803058}
+  - component: {fileID: 595803057}
   m_Layer: 0
   m_Name: PrefabAstro
   m_TagString: Untagged
@@ -10347,11 +10342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b739ce72ac6b9fa4b8526f856f3df931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 1474317042}
-  lesNiveau:
-  - {fileID: 125458095}
-  - {fileID: 1443155203}
-  - {fileID: 1418191208}
+  timer: {fileID: 637225107}
+  lesNiveau: []
   LaSphere: {fileID: 1915085978}
   sceneEnCours: 
   minutes: 0
@@ -10455,6 +10447,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a326ae51020824abbca94a8636757d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &637225107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114050967648496240, guid: c8a326ae51020824abbca94a8636757d,
+    type: 2}
+  m_PrefabInternal: {fileID: 637225106}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &642195525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4330690214929498, guid: 6d2b313075d2fe24da4c9546e2de8fea,
@@ -17089,22 +17087,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1389513317949196, guid: 302ca28e4a0dbf040ac2b35d3ab11e57,
     type: 2}
   m_PrefabInternal: {fileID: 1410242910}
---- !u!1 &1418191208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1122117849802574, guid: c8a326ae51020824abbca94a8636757d,
-    type: 2}
-  m_PrefabInternal: {fileID: 637225106}
---- !u!1 &1443155203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1327308363830878, guid: c8a326ae51020824abbca94a8636757d,
-    type: 2}
-  m_PrefabInternal: {fileID: 637225106}
---- !u!114 &1474317042 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114050967648496240, guid: c8a326ae51020824abbca94a8636757d,
-    type: 2}
-  m_PrefabInternal: {fileID: 637225106}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1492194385
 Prefab:
   m_ObjectHideFlags: 0

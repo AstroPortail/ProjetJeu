@@ -22,8 +22,8 @@ public class ControlerPersonnage : MonoBehaviour
 
     /* -------- Variable pour les objets dynamique ------------------- */
     public static float nombrePiece;
-    public static bool cadeauRamasse = false;
-    public static bool citrouilleRamasse = false;
+    public static bool cadeauRamasse = true;
+    public static bool citrouilleRamasse = true;
     public static bool champiRamasse = false;
     public static bool sphereAttrape = false;
     public static float NiveauOxygene = 100f;
@@ -196,6 +196,7 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "sphere")
         {
+            print("toucheSphere");
             if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true)
             {
                 sphereAttrape = true;

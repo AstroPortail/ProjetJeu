@@ -19,6 +19,7 @@ public class Countdown : MonoBehaviour
 
     private void Start()
     {
+        
         // on choisit un niveau random pour positionner la sphere au début du jeu et on active l'image correspondant
         niveauSphere = Random.Range(0, 3);
         lesNiveau[niveauSphere].SetActive(true);
@@ -31,6 +32,7 @@ public class Countdown : MonoBehaviour
 
     private void Update()
     {
+        LaSphere = GameObject.Find("sphere");
         // on arette le temps si le jeu est en pause
         if (GestionCamera.pause == false)
         {
