@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraSurvole : MonoBehaviour {
 
     
-    public float vitesseDeplacementCam = 0.5f;
+    public float vitesseDeplacementCam = 0.3f;
 
     // Use this for initialization
     void Start () {

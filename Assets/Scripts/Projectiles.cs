@@ -15,6 +15,7 @@ public class Projectiles : MonoBehaviour {
     public GameObject particuleTir;
     public GameObject gun;
     Animator animPersoTir; // va chercher l'animation du perso
+    public float vitesseParticuleTir;
     // Use this for initialization
     void Start() {
         animPersoTir = GetComponent<Animator>();
@@ -27,7 +28,7 @@ public class Projectiles : MonoBehaviour {
         // variable locale : contiendra les infos retournées par le Raycast sur l’objet touché
         RaycastHit infoCollision;
 
-        if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollision, 5000, LayerMask.GetMask("Terrain")))
+        if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollision, 5000, LayerMask.GetMask("Terrain")) )
         {
         
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
@@ -41,7 +42,6 @@ public class Projectiles : MonoBehaviour {
                 transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             }
             
-
         }
 
         //si le bouton gauche est appuyé et qu'on peut tirer, alors on tire continuellement
@@ -53,7 +53,7 @@ public class Projectiles : MonoBehaviour {
             //print("Click gauche souris");
 
           
-                 GameObject cloneParticule = Instantiate(particuleTir, transform.position, transform.rotation);
+                 
                 
                 //DestroyImmediate(particuleTir);
              
@@ -64,8 +64,12 @@ public class Projectiles : MonoBehaviour {
     void TirerBalle()
     {
         particuleTir.SetActive(true);
+        
+        GameObject cloneParticule = Instantiate(particuleTir, gun.transform.position, transform.rotation);
+        cloneParticule.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        cloneParticule.GetComponent<Rigidbody>().velocity = transform.forward * vitesseParticuleTir;
+        Destroy(cloneParticule, 0.5f);
         Invoke("DesactiveBalle", 0.5f);
-        //   cloneParticule.GetComponent<Rigidbody>().velocity = transform.forward * vitesseParticuleTir;
     }
 
     //function qui  désactive la balle
