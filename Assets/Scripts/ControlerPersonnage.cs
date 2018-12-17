@@ -134,9 +134,9 @@ public class ControlerPersonnage : MonoBehaviour
 
         if (infoCollision.gameObject.name == "cadeauAsset")
         {
+            print("ToucheCadeau");
             cadeauRamasse = true;
             Countdown.totalTime += 15f;
-            imgagePortailEte.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             GameObject son = GameObject.Find("sonCadeau");
             son.GetComponent<AudioSource>().Play();
             Destroy(infoCollision.gameObject);
