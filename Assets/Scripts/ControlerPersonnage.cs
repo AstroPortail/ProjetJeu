@@ -21,10 +21,10 @@ public class ControlerPersonnage : MonoBehaviour
     public bool auSol; //pour qu'on regarde si le perso est au sol ou non
 
     /* -------- Variable pour les objets dynamique ------------------- */
-    public static float nombrePiece = 12f;
-    public static bool cadeauRamasse = true;
-    public static bool citrouilleRamasse = true;
-    public static bool champiRamasse = true;
+    public static float nombrePiece;
+    public static bool cadeauRamasse = false;
+    public static bool citrouilleRamasse = false;
+    public static bool champiRamasse = false;
     public static bool sphereAttrape = false;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;

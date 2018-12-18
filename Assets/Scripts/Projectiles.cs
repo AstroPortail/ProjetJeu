@@ -25,13 +25,13 @@ public class Projectiles : MonoBehaviour {
 	void Update () {
         //rayon à partir de la caméra vers l’avant à la position de la souris
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
+
         // variable locale : contiendra les infos retournées par le Raycast sur l’objet touché
         RaycastHit infoCollision;
 
         if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollision, 5000, LayerMask.GetMask("Terrain")) )
         {
-        
+            
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
             var distancePersoSouris = Vector3.Distance(transform.position, infoCollision.point);
@@ -59,7 +59,7 @@ public class Projectiles : MonoBehaviour {
     void TirerBalle()
     {
         particuleTir.SetActive(true);
-        
+        GetComponent<AudioSource>().Play();
         GameObject cloneParticule = Instantiate(particuleTir, gun.transform.position, transform.rotation);
         cloneParticule.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         cloneParticule.GetComponent<Rigidbody>().velocity = transform.forward * vitesseParticuleTir;

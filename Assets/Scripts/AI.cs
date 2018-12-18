@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class AI : MonoBehaviour {
     public GameObject cible;
     public bool estMort = false;
+    public float coupsRecus = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -43,40 +44,52 @@ public class AI : MonoBehaviour {
     }
 
         // si les ennemis sont touché par une balle
-        public void Touche()
+    public void Touche()
     {
-        // pointage de 20 pour un elephant
-        if (gameObject.transform.name == "ennemiArbre")
+        coupsRecus += 1;
+        print("coupsRecus = " + coupsRecus);
+
+      
+        if (gameObject.transform.name == "ennemiArbre(Clone)")
         {
-            print("ARBRE");
+            if(coupsRecus >= 3)
+            {
+                estMort = true;
+            }
         }
 
-        // pointage de 10 pour un lapin
-        else if (gameObject.transform.name == "ennemiAraignee")
+        else if (gameObject.transform.name == "ennemiAraignee(Clone)")
         {
-            print("ARAIGNEE");
+            if (coupsRecus >= 2)
+            {
+                estMort = true;
+            }
         }
 
-        // pointage de 5 pour un ours
-        else if (gameObject.transform.name == "ennemiAbeille")
+        
+        else if (gameObject.transform.name == "ennemiAbeille(Clone)")
         {
-            print("ABEILLE");
+            if (coupsRecus >= 1)
+            {
+                estMort = true;
+            }
         }
 
-        // on ajuste la bool estMort à true
-        estMort = true;
+        if(estMort == true)
+        {
 
-        // on joue le son de leur mort
-        //GetComponent<AudioSource>().Play();
+            // on joue le son de leur mort
+            GetComponent<AudioSource>().Play();
 
-        // on arette de le déplacer
-        GetComponent<NavMeshAgent>().enabled = false;
+            // on arette de le déplacer
+            GetComponent<NavMeshAgent>().enabled = false;
 
-        // on joue leur animation de mort
-        GetComponent<Animator>().SetTrigger("Die");
+            // on joue leur animation de mort
+            GetComponent<Animator>().SetTrigger("Die");
 
-        // et on le detruit après 2 secondes
-        Invoke("Mort", 2f);
+            // et on le detruit après 2 secondes
+            Invoke("Mort", 2f);
+        }
     }
 
     // detruire l'ennemi
