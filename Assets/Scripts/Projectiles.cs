@@ -25,6 +25,7 @@ public class Projectiles : MonoBehaviour {
 	void Update () {
         //rayon à partir de la caméra vers l’avant à la position de la souris
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
         // variable locale : contiendra les infos retournées par le Raycast sur l’objet touché
         RaycastHit infoCollision;
 
@@ -34,14 +35,21 @@ public class Projectiles : MonoBehaviour {
             Vector3 pointAregarder = infoCollision.point; // On copie le vecteur3 de contact pour pouvoir changer le y
             pointAregarder.y = 0; // élimine la hauteur lorsque le jeu se passe sur un plancher
             var distancePersoSouris = Vector3.Distance(transform.position, infoCollision.point);
-          //  print(distancePersoSouris);
 
             if (distancePersoSouris >= 1)
             {
                 transform.LookAt(infoCollision.point); // L'objet regarde vers le point de contact
                 transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             }
-            
+
+            // si le rayon touche un ennemi
+            if (infoCollision.collider.gameObject.tag == "ennemiArbre")
+            {
+                // on appel la fonction touche dans le script des ennmis et on ajuste le pointage.
+                GameObject CetEnnemis = infoCollision.collider.gameObject;
+                CetEnnemis.GetComponent<AI>().Touche();
+            }
+
         }
 
         //si le bouton gauche est appuyé et qu'on peut tirer, alors on tire continuellement
