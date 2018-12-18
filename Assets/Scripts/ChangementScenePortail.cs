@@ -16,19 +16,6 @@ public class ChangementScenePortail : MonoBehaviour {
         print(sceneEnCours);
     }
 
-    void Update()//à remplacer dans le OnCollisionStay pour que si la scène est mauvaise, il peut regénérer un chfifre.
-    {
-
-
-
-    }
-
-
-    /*public void Rejouer()
-{
-    SceneManager.LoadScene("HiverHelo");
-}*/
-
     public void Jouer()
     {
         if (champNomJoueur.text !="")
@@ -85,14 +72,5 @@ public class ChangementScenePortail : MonoBehaviour {
 
         }
     }
-
-        // Va falloir penser a si jamais le joueur arrive toujours aux mêmes saisons et en manque toujours
-        //une, comment on va s'arranger
-    
-
-
-
-
-
 }// FIN CLASSE GESTIONSCENES
 

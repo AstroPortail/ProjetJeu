@@ -1294,6 +1294,16 @@ Prefab:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114019285122316356, guid: cc9aecfce5ad66943bfda9dbf85a1ad3,
+        type: 2}
+      propertyPath: panneauAvertissement
+      value: 
+      objectReference: {fileID: 1322980690}
+    - target: {fileID: 114019285122316356, guid: cc9aecfce5ad66943bfda9dbf85a1ad3,
+        type: 2}
+      propertyPath: avertissement
+      value: 
+      objectReference: {fileID: 1747066570}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9aecfce5ad66943bfda9dbf85a1ad3, type: 2}
   m_IsPrefabAsset: 0

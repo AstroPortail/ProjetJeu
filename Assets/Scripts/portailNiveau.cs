@@ -9,6 +9,8 @@ public class portailNiveau : MonoBehaviour {
     public string sceneEnCours;
    // public GameObject ObjetDuNiveau;
     public bool estTrouve = false;
+    public GameObject panneauAvertissement;
+    public Text avertissement;
 
     public Image cadeau;
     public Image champi;
@@ -18,6 +20,14 @@ public class portailNiveau : MonoBehaviour {
     {
         sceneEnCours = SceneManager.GetActiveScene().name;
          
+    }
+
+    IEnumerator ActivePanneauAvertissement2()
+    {
+        panneauAvertissement.SetActive(true);
+        avertissement.text = "Vous devez amasser l'objet spécial de ce niveau avant d'acceder au portail !";
+        yield return new WaitForSeconds(5);
+        panneauAvertissement.SetActive(false);
     }
 
     private void Update()
@@ -51,28 +61,36 @@ public class portailNiveau : MonoBehaviour {
     private void OnTriggerStay(Collider infoCollision)
     {
 
-        if (infoCollision.gameObject.name == "PrefabAstro" && estTrouve == true)
+        if (infoCollision.gameObject.name == "PrefabAstro")
         {
-            int sceneAleatoire = Random.Range(0, 3);
 
-            if (sceneAleatoire == 0 && sceneEnCours != "Automne")
+            if(estTrouve == true)
             {
+                int sceneAleatoire = Random.Range(0, 3);
 
-                SceneManager.LoadScene("Automne");
-            }
+                if (sceneAleatoire == 0 && sceneEnCours != "Automne")
+                {
 
-            if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
+                    SceneManager.LoadScene("Automne");
+                }
+
+                if (sceneAleatoire == 1 && sceneEnCours != "HiverHelo")
+                {
+                    //SceneManager.LoadScene("EteLaurence");
+                    SceneManager.LoadScene("HiverHelo");
+                }
+
+                if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
+                {
+                    //SceneManager.LoadScene("HiverHelo");
+                    SceneManager.LoadScene("EteLaurence");
+
+                }
+            } else
             {
-                //SceneManager.LoadScene("EteLaurence");
-                SceneManager.LoadScene("HiverHelo");
+                StartCoroutine(ActivePanneauAvertissement2());
             }
-
-            if (sceneAleatoire == 2 && sceneEnCours != "EteLaurence")
-            {
-                //SceneManager.LoadScene("HiverHelo");
-                SceneManager.LoadScene("EteLaurence");
-
-            }
+           
         }
     }
 }

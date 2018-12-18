@@ -22,8 +22,8 @@ public class ControlerPersonnage : MonoBehaviour
 
     /* -------- Variable pour les objets dynamique ------------------- */
     public static float nombrePiece;
-    public static bool cadeauRamasse = true;
-    public static bool citrouilleRamasse = true;
+    public static bool cadeauRamasse = false;
+    public static bool citrouilleRamasse = false;
     public static bool champiRamasse = false;
     public static bool sphereAttrape = false;
     public static float NiveauOxygene = 100f;
@@ -198,7 +198,7 @@ public class ControlerPersonnage : MonoBehaviour
         if (infoCollision.gameObject.name == "sphere")
         {
             print("toucheSphere");
-            if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true)
+            if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true && nombrePiece == 12)
             {
                 sphereAttrape = true;
                 SceneManager.LoadScene("SceneFin");
@@ -451,7 +451,7 @@ public class ControlerPersonnage : MonoBehaviour
     IEnumerator ActivePanneauAvertissement()
     {
         panneauAvertissement.SetActive(true);
-        avertissement.text = "Vous devez amasser tous les objets obligatoires avant d'attrapper la sphère !";
+        avertissement.text = "Vous devez amasser tous les objets spécial et les 12 pièces de vaisseau avant d'attrapper la sphère !";
         yield return new WaitForSeconds(5);
         panneauAvertissement.SetActive(false);
     }

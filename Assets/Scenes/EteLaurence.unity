@@ -20134,6 +20134,16 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114019285122316356, guid: cc9aecfce5ad66943bfda9dbf85a1ad3,
+        type: 2}
+      propertyPath: panneauAvertissement
+      value: 
+      objectReference: {fileID: 1623625216}
+    - target: {fileID: 114019285122316356, guid: cc9aecfce5ad66943bfda9dbf85a1ad3,
+        type: 2}
+      propertyPath: avertissement
+      value: 
+      objectReference: {fileID: 1623625215}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9aecfce5ad66943bfda9dbf85a1ad3, type: 2}
   m_IsPrefabAsset: 0
