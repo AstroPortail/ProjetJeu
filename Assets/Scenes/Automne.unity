@@ -2704,6 +2704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 389944720}
+  estMort: 0
 --- !u!1 &371449829
 GameObject:
   m_ObjectHideFlags: 0
@@ -15494,6 +15495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 389944720}
+  estMort: 0
 --- !u!1 &654637143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1879856222048136, guid: 6d2b313075d2fe24da4c9546e2de8fea,
@@ -24702,6 +24704,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4387122554487508, guid: c12e4c24b60872c41b0989004e191efd,
     type: 2}
   m_PrefabInternal: {fileID: 378212532}
+--- !u!136 &1330165571
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330165569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17519277
+  m_Height: 0.30973256
+  m_Direction: 1
+  m_Center: {x: 0.00006103637, y: 0.0203265, z: 0.0101634385}
 --- !u!54 &1330165573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26224,6 +26239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 389944720}
+  estMort: 0
 --- !u!136 &1903550343
 CapsuleCollider:
   m_ObjectHideFlags: 0

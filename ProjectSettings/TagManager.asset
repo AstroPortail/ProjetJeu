@@ -9,6 +9,7 @@ TagManager:
   - ennemiAbeille
   - ennemiAraignee
   - astro
+  - projectile
   layers:
   - Default
   - TransparentFX

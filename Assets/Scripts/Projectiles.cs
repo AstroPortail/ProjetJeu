@@ -42,14 +42,6 @@ public class Projectiles : MonoBehaviour {
                 transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             }
 
-            // si le rayon touche un ennemi
-            if (infoCollision.collider.gameObject.tag == "ennemiArbre")
-            {
-                // on appel la fonction touche dans le script des ennmis et on ajuste le pointage.
-                GameObject CetEnnemis = infoCollision.collider.gameObject;
-                CetEnnemis.GetComponent<AI>().Touche();
-            }
-
         }
 
         //si le bouton gauche est appuyé et qu'on peut tirer, alors on tire continuellement
