@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +9,10 @@ public class GestionSceneFin : MonoBehaviour {
    
     public void Rejouer()
     {
+        ControlerPersonnage.champiRamasse = false;
+        ControlerPersonnage.cadeauRamasse = false;
+        ControlerPersonnage.citrouilleRamasse = false;
+        ControlerPersonnage.nombrePiece = 0;
 
         // oxygene, vie, temps a zéro
          ControlerPersonnage.NiveauOxygene = 100f;

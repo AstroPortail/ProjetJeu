@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -454,7 +454,7 @@ public class ControlerPersonnage : MonoBehaviour
     IEnumerator ActivePanneauAvertissement()
     {
         panneauAvertissement.SetActive(true);
-        avertissement.text = "Vous devez amasser tous les objets spécial et les 12 pièces de vaisseau avant d'attrapper la sphère !";
+        avertissement.text = "Vous devez amasser tous les objets spécial et les 9 pièces de vaisseau avant d'attrapper la sphère !";
         yield return new WaitForSeconds(5);
         panneauAvertissement.SetActive(false);
     }
