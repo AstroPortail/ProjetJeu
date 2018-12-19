@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-// https://answers.unity.com/questions/980339/count-down-timer-c-1.html
+// source :  https://answers.unity.com/questions/980339/count-down-timer-c-1.html
+/*
+* 1. Définir aléatoirement le niveau dans laquel se trouve la sphère. ( Le premier sera toujours l'hiver ) 
+* 2. Afficher l'icone correspondant
+* 3. Faire aparraitre la sphère dans le niveau définit ( set active true )
+* 4. Calculer et afficher le temps restant avant que la sphère change de niveau 
+*/
 
 public class Countdown : MonoBehaviour
 {

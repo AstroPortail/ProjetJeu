@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+* 1. Donner une cible aléatoire pour la sphère
+* 2. Lorsqu'elle atteint sa cible, lui en donner une nouvelle.
+*/
 public class AISphere : MonoBehaviour {
     public Vector3 cibleRandom;
     public float valeurY;

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
+/*
+* 1. Jouer l'animation de fin si le joueur à réussis et afficher son score à la fin du vidéo
+* 2. OU Afficher le tableau de défaite si le joueur a perdu
+*/
 public class finVideo : MonoBehaviour {
 
     public GameObject tabScore;

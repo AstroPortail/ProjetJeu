@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+
 public class ControlerPersonnage : MonoBehaviour
 {
 

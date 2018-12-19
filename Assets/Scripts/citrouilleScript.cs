@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* 1. Donner une position aléatoire et faire tomber l'objet du ciel
+* 2. Activer le meshRanderer de cet objet seulement lorsqu'il est au sol.
+*/
 public class citrouilleScript : MonoBehaviour {
 
     public MeshRenderer[] CitrouilleTableauMeshObjets;

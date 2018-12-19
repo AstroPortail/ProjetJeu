@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+* 1. Donner l'astronaute comme cible pour le navMesh des ennemis
+* 2. Gestion de la mort des ennemis lorsqu'ils recoivent des coups
+*/
+
 public class AI : MonoBehaviour {
     public GameObject cible;
     public bool estMort = false;
