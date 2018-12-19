@@ -66,6 +66,8 @@ public class portailNiveau : MonoBehaviour {
 
             if(estTrouve == true)
             {
+                GameObject son = GameObject.Find("sonPortail");
+                son.GetComponent<AudioSource>().Play();
                 int sceneAleatoire = Random.Range(0, 3);
 
                 if (sceneAleatoire == 0 && sceneEnCours != "Automne")

@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    public static float totalTime = 90f; //2 minutes
+    public static float totalTime = 60f; //1 minute
     public Text timer;
-    public static int niveauSphere;
+    public static int niveauSphere = 1;
     public GameObject[] lesNiveau;
     public GameObject LaSphere;
     public string sceneEnCours;
@@ -19,9 +19,6 @@ public class Countdown : MonoBehaviour
 
     private void Start()
     {
-        
-        // on choisit un niveau random pour positionner la sphere au début du jeu et on active l'image correspondant
-        niveauSphere = Random.Range(0, 3);
         lesNiveau[niveauSphere].SetActive(true);
 
         // on garde en mémoire le nom de la scene active
@@ -44,7 +41,7 @@ public class Countdown : MonoBehaviour
         {
             // on change la sphere de niveau et on redémarre le chrono
             niveauSphere = Random.Range(0, 3);
-            totalTime = 90f;
+            totalTime = 60f;
 
             // on désactive les images
             for (var iCompteur = 0; iCompteur < lesNiveau.Length; iCompteur++)

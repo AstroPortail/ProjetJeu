@@ -21,10 +21,10 @@ public class ControlerPersonnage : MonoBehaviour
     public bool auSol; //pour qu'on regarde si le perso est au sol ou non
 
     /* -------- Variable pour les objets dynamique ------------------- */
-    public static float nombrePiece;
-    public static bool cadeauRamasse = false;
-    public static bool citrouilleRamasse = false;
-    public static bool champiRamasse = false;
+    public static float nombrePiece = 9;
+    public static bool cadeauRamasse = true;
+    public static bool citrouilleRamasse = true;
+    public static bool champiRamasse = true;
     public static bool sphereAttrape = false;
     public static float NiveauOxygene = 100f;
     public static float NiveauVie = 100f;
@@ -198,9 +198,11 @@ public class ControlerPersonnage : MonoBehaviour
         if (infoCollision.gameObject.name == "sphere")
         {
             print("toucheSphere");
-            if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true && nombrePiece == 12)
+            if(champiRamasse == true && citrouilleRamasse == true && cadeauRamasse == true && nombrePiece >= 9)
             {
                 sphereAttrape = true;
+                GameObject son = GameObject.Find("sonPortail");
+                son.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("SceneFin");
             } else
             {
@@ -369,7 +371,7 @@ public class ControlerPersonnage : MonoBehaviour
     {
         /*Changer le texte des pieces*/
 
-        textNombrePiece.text = nombrePiece.ToString() + " / 12";
+        textNombrePiece.text = nombrePiece.ToString() + " / 9";
 
         /* changer le alpha des images si leur objets est rammassé*/
         if(cadeauRamasse == true)
