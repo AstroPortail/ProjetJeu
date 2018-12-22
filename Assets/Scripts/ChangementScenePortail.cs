@@ -72,5 +72,11 @@ public class ChangementScenePortail : MonoBehaviour {
 
         }
     }
+
+    public void MenuDepart()
+    {
+        //Revenir a l'accueil
+        SceneManager.LoadScene("EcranIntro");
+    }
 }// FIN CLASSE GESTIONSCENES
 
